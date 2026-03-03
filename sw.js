@@ -1,10 +1,11 @@
-const CACHE_NAME = 'vgf-events-v1';
+const CACHE_NAME = 'vgf-events-v7';
 const ASSETS = [
     './',
     './index.html',
     './styles.css',
     './app.js',
     './manifest.json',
+    './offsite5_banner.png',
     './icon-192.png',
     './icon-512.png'
 ];

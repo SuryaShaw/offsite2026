@@ -91,113 +91,9 @@ body {
 .splash-screen {
   align-items: center;
   justify-content: space-between;
-  padding: 48px 24px;
+  padding: 60px 24px 48px;
   position: relative;
   overflow: hidden;
-}
-
-/* Concentric rings */
-.splash-rings {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 48px;
-}
-
-.splash-ring {
-  position: absolute;
-  border-radius: 50%;
-  border: 1px solid;
-}
-
-.splash-ring-1 {
-  width: 208px;
-  height: 208px;
-  border-color: rgba(var(--accent-green-rgb), 0.4);
-  animation: pulse-ring 3s ease-in-out infinite;
-}
-
-.splash-ring-2 {
-  width: 240px;
-  height: 240px;
-  border-color: rgba(var(--accent-green-rgb), 0.2);
-  transform: rotate(45deg);
-  animation: pulse-ring 3s ease-in-out infinite 0.5s;
-}
-
-@keyframes pulse-ring {
-
-  0%,
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-
-  50% {
-    transform: scale(1.05);
-    opacity: 0.6;
-  }
-}
-
-.splash-logo-circle {
-  position: relative;
-  z-index: 10;
-  width: 144px;
-  height: 144px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, rgba(var(--primary-rgb), 0.1), rgba(var(--accent-green-rgb), 0.3));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid rgba(var(--primary-rgb), 0.2);
-  box-shadow: 0 0 40px rgba(var(--primary-rgb), 0.15);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  animation: glow-pulse 2s ease-in-out infinite;
-}
-
-@keyframes glow-pulse {
-
-  0%,
-  100% {
-    box-shadow: 0 0 40px rgba(var(--primary-rgb), 0.15);
-  }
-
-  50% {
-    box-shadow: 0 0 60px rgba(var(--primary-rgb), 0.25);
-  }
-}
-
-.splash-logo-circle .material-symbols-outlined {
-  font-size: 72px;
-  color: var(--primary);
-  font-variation-settings: 'FILL' 1, 'wght' 200;
-}
-
-.splash-vintage-icon {
-  position: absolute;
-  bottom: -24px;
-  right: -24px;
-  opacity: 0.4;
-  font-size: 48px;
-  color: var(--accent-green);
-}
-
-.splash-title {
-  color: #fff;
-  letter-spacing: 0.2em;
-  font-size: 30px;
-  font-weight: 300;
-  text-transform: uppercase;
-  line-height: 1.3;
-  text-align: center;
-  margin-top: 32px;
-}
-
-.splash-title span {
-  display: block;
-  font-weight: 700;
 }
 
 .splash-content {
@@ -207,98 +103,108 @@ body {
   align-items: center;
   justify-content: center;
   width: 100%;
-  max-width: 320px;
+  z-index: 10;
 }
 
-.splash-subtitle {
+/* Logo */
+.splash-logo {
+  margin-bottom: 24px;
+}
+
+.splash-logo-img {
+  width: 280px;
+  height: 280px;
+  object-fit: contain;
+}
+
+/* Text block */
+.splash-text {
   text-align: center;
-  margin-top: 24px;
-}
-
-.splash-subtitle .label {
-  color: var(--primary);
-  letter-spacing: 0.3em;
-  font-size: 10px;
-  font-weight: 700;
-  text-transform: uppercase;
-  margin-bottom: 12px;
-}
-
-.splash-subtitle .event-name {
-  color: #e2e8f0;
-  font-size: 20px;
-  font-weight: 500;
-  letter-spacing: 0.05em;
-}
-
-/* Progress bar area */
-.splash-progress {
-  width: 100%;
-  max-width: 280px;
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-  margin-bottom: 16px;
-}
-
-.progress-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-}
-
-.progress-label {
-  color: #94a3b8;
-  font-size: 10px;
-  font-weight: 500;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-}
-
-.progress-percent {
-  color: var(--primary);
-  font-size: 12px;
-  font-weight: 700;
-  font-family: monospace;
-}
-
-.progress-track {
-  height: 1px;
-  width: 100%;
-  background: #1e293b;
-  border-radius: var(--radius-full);
-  overflow: hidden;
-}
-
-.progress-fill {
-  height: 100%;
-  width: 0%;
-  background: var(--primary);
-  border-radius: var(--radius-full);
-  box-shadow: 0 0 12px rgba(var(--primary-rgb), 0.8);
-  transition: width 0.1s linear;
-}
-
-.splash-footer {
+  margin-bottom: 28px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
+  gap: 0;
 }
 
-.splash-footer-text {
-  color: #475569;
-  font-size: 9px;
-  text-align: center;
+.splash-small-text {
+  color: var(--primary);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.4em;
   text-transform: uppercase;
-  letter-spacing: 0.25em;
-  font-weight: 600;
+  line-height: 1;
 }
 
-.splash-footer-line {
-  width: 32px;
-  height: 1px;
-  background: rgba(var(--primary-rgb), 0.3);
+.splash-big-text {
+  color: #fff;
+  font-size: 52px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  line-height: 1;
+  margin: 6px 0;
+  text-transform: uppercase;
+}
+
+/* Invite message */
+.splash-invite {
+  color: #94a3b8;
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 1.8;
+  max-width: 300px;
+  letter-spacing: 0.04em;
+  font-style: italic;
+}
+
+/* Bottom section with enter button */
+.splash-bottom {
+  z-index: 10;
+  padding-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.splash-enter-btn {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--primary);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 30px rgba(var(--primary-rgb), 0.4);
+  transition: all 0.3s ease;
+  -webkit-tap-highlight-color: transparent;
+  animation: btn-pulse 2s ease-in-out infinite;
+}
+
+.splash-enter-btn .material-symbols-outlined {
+  font-size: 32px;
+  color: #000;
+  font-weight: 700;
+}
+
+.splash-enter-btn:active {
+  transform: scale(0.92);
+  box-shadow: 0 0 15px rgba(var(--primary-rgb), 0.6);
+}
+
+@keyframes btn-pulse {
+
+  0%,
+  100% {
+    box-shadow: 0 0 30px rgba(var(--primary-rgb), 0.4);
+  }
+
+  50% {
+    box-shadow: 0 0 50px rgba(var(--primary-rgb), 0.7);
+  }
 }
 
 /* Vignette overlay */
@@ -404,7 +310,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.6;
+  opacity: 0.5;
 }
 
 .home-hero-overlay {
@@ -436,12 +342,17 @@ body {
   line-height: 1.15;
 }
 
-/* CTA buttons */
-.home-actions {
-  padding: 32px 24px 0;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+/* Intro text */
+.home-intro {
+  padding: 28px 24px 0;
+}
+
+.home-intro p {
+  font-size: 14px;
+  color: #94a3b8;
+  line-height: 1.7;
+  font-weight: 400;
+  letter-spacing: 0.01em;
 }
 
 .cta-button {
@@ -677,6 +588,37 @@ body {
 
 .date-pill.active .day {
   color: #fff;
+}
+
+/* Schedule Tabs (Offsite / Onsite) */
+.schedule-tabs {
+  display: flex;
+  gap: 8px;
+  padding: 12px 0 4px;
+}
+
+.schedule-tab {
+  flex: 1;
+  padding: 10px 0;
+  border-radius: var(--radius-full);
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  color: #94a3b8;
+  font-family: var(--font-display);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.schedule-tab.active {
+  background: var(--primary);
+  color: #000;
+  border-color: var(--primary);
+  box-shadow: 0 0 16px rgba(var(--primary-rgb), 0.3);
 }
 
 /* Timeline body */

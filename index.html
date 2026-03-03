@@ -24,35 +24,22 @@
     <!-- ===== SCREEN 1: SPLASH / WELCOME ===== -->
     <div id="splash-screen" class="screen active splash-active splash-screen">
       <div class="splash-content">
-        <div class="splash-rings">
-          <div class="splash-ring splash-ring-1"></div>
-          <div class="splash-ring splash-ring-2"></div>
-          <div class="splash-logo-circle">
-            <span class="material-symbols-outlined">movie_filter</span>
-          </div>
-          <span class="material-symbols-outlined splash-vintage-icon">filter_vintage</span>
+        <div class="splash-logo">
+          <img src="offsite5_banner.png" alt="VGF Logo" class="splash-logo-img" />
         </div>
-        <h1 class="splash-title">Vine Garden <span>Films</span></h1>
-        <div class="splash-subtitle">
-          <p class="label">Event App 2026</p>
-          <p class="event-name">Offsite &amp; Onsite</p>
+        <div class="splash-text">
+          <p class="splash-small-text">VGF</p>
+          <h1 class="splash-big-text">Offsite</h1>
+          <p class="splash-small-text">2026</p>
         </div>
+        <p class="splash-invite">Where ideas meet adventure.<br>Join the VGF family for four days offsite<br>and five
+          days onsite — let's create magic together.<br>April 2–10, 2026</p>
       </div>
 
-      <div class="splash-progress">
-        <div>
-          <div class="progress-header">
-            <p class="progress-label">Initializing Cinematic Suite</p>
-            <p class="progress-percent" id="progress-percent">0%</p>
-          </div>
-          <div class="progress-track">
-            <div class="progress-fill" id="progress-fill"></div>
-          </div>
-        </div>
-        <div class="splash-footer">
-          <p class="splash-footer-text">Premium Production Services</p>
-          <div class="splash-footer-line"></div>
-        </div>
+      <div class="splash-bottom">
+        <button class="splash-enter-btn" id="splash-enter-btn">
+          <span class="material-symbols-outlined">arrow_forward</span>
+        </button>
       </div>
       <div class="vignette"></div>
       <div class="splash-gradient"></div>
@@ -61,25 +48,17 @@
     <!-- ===== SCREEN 2: HOME ===== -->
     <div id="home-screen" class="screen home-screen">
       <div class="home-hero">
-        <img
-          src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDvTYTawqXGUjYBj-v-ly9rfSLi60SADC59cvoj-uY-JyldujhyqyXQ7ysCPwR31pMbGuNOrE4dPCDttuQegQk7Oc-NP06YoiHxvx6ShQr6I60BinlkuL8AogXrAfRZONJxK7Zjd30BkprHZKePPTzjkPhZ558c0sq6oPXZx3ju9lYhhxEy7yiVDXwqGW6-zevZCfEKMJaVa9eWyHmefLXAEMlO-qtHtwolXuYUX4n-wPoyc3_GUTBJIkl4fq-wW9jz3yq_u32py8"
-          alt="Offsite hero" />
+        <img src="team_banner.png" alt="VGF Team" />
         <div class="home-hero-overlay"></div>
         <div class="home-hero-content">
           <p class="brand-label">Vine Garden Films</p>
-          <h1>Offsite &amp; Onsite<br>2026</h1>
+          <h1>Offsite 2026</h1>
         </div>
       </div>
 
-      <div class="home-actions">
-        <button class="cta-button animate-slide-up stagger-1" id="cta-offsite">
-          <span>View Offsite Events</span>
-          <span class="material-symbols-outlined">arrow_forward_ios</span>
-        </button>
-        <button class="cta-button animate-slide-up stagger-2" id="cta-onsite">
-          <span>View Onsite Events</span>
-          <span class="material-symbols-outlined">arrow_forward_ios</span>
-        </button>
+      <div class="home-intro animate-slide-up stagger-1">
+        <p>Welcome to the official Vine Garden Films event companion. Explore the schedule, connect with participants,
+          and stay updated throughout the Offsite &amp; Onsite 2026.</p>
       </div>
 
       <div class="home-features">
@@ -107,30 +86,60 @@
       </div>
     </div>
 
-    <!-- ===== SCREEN 3: TIMELINE / SCHEDULE ===== -->
+    <!-- ===== SCREEN 3: SCHEDULE ===== -->
     <div id="timeline-screen" class="screen timeline-screen">
       <div class="timeline-header">
         <div class="timeline-header-top">
           <div>
             <p class="brand-label">Vine Garden Films</p>
-            <h2>Event Timeline</h2>
+            <h2>Schedule</h2>
           </div>
           <button class="timeline-calendar-btn">
             <span class="material-symbols-outlined">calendar_today</span>
           </button>
         </div>
-        <div class="date-pills">
-          <div class="date-pill active">
-            <span class="month">Oct</span>
-            <span class="day">14</span>
+        <div class="schedule-tabs">
+          <button class="schedule-tab active" data-schedule="offsite">Offsite</button>
+          <button class="schedule-tab" data-schedule="onsite">Onsite</button>
+        </div>
+        <div class="date-pills" id="offsite-dates">
+          <div class="date-pill active" data-date="apr2">
+            <span class="month">Apr</span>
+            <span class="day">2</span>
           </div>
-          <div class="date-pill">
-            <span class="month">Oct</span>
-            <span class="day">15</span>
+          <div class="date-pill" data-date="apr3">
+            <span class="month">Apr</span>
+            <span class="day">3</span>
           </div>
-          <div class="date-pill">
-            <span class="month">Oct</span>
-            <span class="day">16</span>
+          <div class="date-pill" data-date="apr4">
+            <span class="month">Apr</span>
+            <span class="day">4</span>
+          </div>
+          <div class="date-pill" data-date="apr5">
+            <span class="month">Apr</span>
+            <span class="day">5</span>
+          </div>
+        </div>
+        <div class="date-pills" id="onsite-dates" style="display:none;">
+          <div class="date-pill active" data-date="apr6">
+            <span class="month">Apr</span>
+            <span class="day">6</span>
+          </div>
+          <div class="date-pill" data-date="apr7">
+            <span class="month">Apr</span>
+            <span class="day">7</span>
+          </div>
+          <div class="date-pill" data-date="apr8">
+            <span class="month">Apr</span>
+            <span class="day">8</span>
+          </div>
+          <div class="date-pill" data-date="apr9">
+            <span class="month">Apr</span>
+            <span class="day">9</span>
+          </div>
+          <div class="date-pill" data-date="apr10">
+            <span class="month">Apr</span>
+            <span class="day">10</span>
           </div>
         </div>
       </div>
@@ -138,76 +147,264 @@
       <div class="timeline-body">
         <div class="timeline-line"></div>
 
-        <!-- Event 1: 08:00 -->
-        <div class="timeline-event animate-fade-in stagger-1">
-          <div class="timeline-time-col">
-            <span class="timeline-time">08:00</span>
-            <div class="timeline-dot"></div>
-          </div>
-          <div class="event-card">
-            <div class="event-card-header">
-              <span class="event-tag morning">Morning Session</span>
-              <span class="material-symbols-outlined">videocam</span>
+        <!-- === APR 2 (Thursday) === -->
+        <div class="schedule-day" data-schedule-date="apr2">
+          <div class="timeline-event animate-fade-in stagger-1">
+            <div class="timeline-time-col"><span class="timeline-time">12:00</span>
+              <div class="timeline-dot"></div>
             </div>
-            <h3>Director's Welcome Breakfast</h3>
-            <p>Opening ceremony and creative vision for the 2026 production slate.</p>
-            <button class="rsvp-btn primary">RSVP NOW</button>
+            <div class="event-card">
+              <div class="event-card-header"><span class="event-tag morning">Arrival</span><span
+                  class="material-symbols-outlined">flight_land</span></div>
+              <h3>Arrival</h3>
+              <p>Check-in and settle into the venue.</p>
+            </div>
+          </div>
+          <div class="timeline-event animate-fade-in stagger-2">
+            <div class="timeline-time-col"><span class="timeline-time">14:00</span>
+              <div class="timeline-dot muted"></div>
+            </div>
+            <div class="event-card featured">
+              <div class="event-card-header"><span class="event-tag lunch">Lunch</span><span
+                  class="material-symbols-outlined">restaurant</span></div>
+              <h3>Lunch</h3>
+              <p>Welcome lunch with the team.</p>
+            </div>
+          </div>
+          <div class="timeline-event animate-fade-in stagger-3">
+            <div class="timeline-time-col"><span class="timeline-time">16:30</span>
+              <div class="timeline-dot muted"></div>
+            </div>
+            <div class="event-card">
+              <div class="event-card-header"><span class="event-tag workshop">Hi-Tea</span><span
+                  class="material-symbols-outlined">local_cafe</span></div>
+              <h3>Hi-Tea</h3>
+              <p>Refreshments and networking.</p>
+            </div>
+          </div>
+          <div class="timeline-event animate-fade-in stagger-4">
+            <div class="timeline-time-col"><span class="timeline-time highlight">17:00</span>
+              <div class="timeline-dot large"></div>
+            </div>
+            <div class="event-card">
+              <div class="event-card-header"><span class="event-tag shoot">Game</span><span
+                  class="material-symbols-outlined">sports_esports</span></div>
+              <h3>Game 1</h3>
+              <p>Team building game session.</p>
+            </div>
+          </div>
+          <div class="timeline-event animate-fade-in stagger-5">
+            <div class="timeline-time-col"><span class="timeline-time highlight">19:00</span>
+              <div class="timeline-dot large"></div>
+            </div>
+            <div class="event-card">
+              <div class="event-card-header"><span class="event-tag shoot">Game</span><span
+                  class="material-symbols-outlined">sports_esports</span></div>
+              <h3>Game 2</h3>
+              <p>Evening game round.</p>
+            </div>
+          </div>
+          <div class="timeline-event animate-fade-in stagger-6">
+            <div class="timeline-time-col"><span class="timeline-time">21:30</span>
+              <div class="timeline-dot muted"></div>
+            </div>
+            <div class="event-card featured">
+              <div class="event-card-header"><span class="event-tag lunch">Dinner</span><span
+                  class="material-symbols-outlined">dinner_dining</span></div>
+              <h3>Dinner</h3>
+              <p>Sit-down dinner with the team.</p>
+            </div>
+          </div>
+          <div class="timeline-event animate-fade-in">
+            <div class="timeline-time-col"><span class="timeline-time">23:00</span>
+              <div class="timeline-dot muted"></div>
+            </div>
+            <div class="event-card">
+              <div class="event-card-header"><span class="event-tag workshop">Leisure</span><span
+                  class="material-symbols-outlined">pool</span></div>
+              <h3>Pool</h3>
+              <p>Unwind by the pool.</p>
+            </div>
           </div>
         </div>
 
-        <!-- Event 2: 10:30 -->
-        <div class="timeline-event animate-fade-in stagger-2">
-          <div class="timeline-time-col">
-            <span class="timeline-time">10:30</span>
-            <div class="timeline-dot muted"></div>
-          </div>
-          <div class="event-card">
-            <div class="event-card-header">
-              <span class="event-tag workshop">Workshop</span>
-              <span class="material-symbols-outlined muted">movie_edit</span>
+        <!-- === APR 3 (Friday) === -->
+        <div class="schedule-day" data-schedule-date="apr3" style="display:none;">
+          <div class="timeline-event animate-fade-in stagger-1">
+            <div class="timeline-time-col"><span class="timeline-time">12:00</span>
+              <div class="timeline-dot"></div>
             </div>
-            <h3>Cinematic Lighting Masterclass</h3>
-            <p>Hands-on session with the new RED V-Raptor XL systems.</p>
-            <button class="rsvp-btn secondary">CONFIRMED</button>
+            <div class="event-card featured">
+              <div class="event-card-header"><span class="event-tag lunch">Brunch</span><span
+                  class="material-symbols-outlined">brunch_dining</span></div>
+              <h3>Brunch</h3>
+              <p>Late morning brunch to start the day.</p>
+            </div>
+          </div>
+          <div class="timeline-event animate-fade-in stagger-2">
+            <div class="timeline-time-col"><span class="timeline-time highlight">13:00</span>
+              <div class="timeline-dot large"></div>
+            </div>
+            <div class="event-card">
+              <div class="event-card-header"><span class="event-tag shoot">Game</span><span
+                  class="material-symbols-outlined">sports_esports</span></div>
+              <h3>Game 3</h3>
+              <p>1:00 – 3:00 PM team challenge.</p>
+            </div>
+          </div>
+          <div class="timeline-event animate-fade-in stagger-3">
+            <div class="timeline-time-col"><span class="timeline-time">16:00</span>
+              <div class="timeline-dot muted"></div>
+            </div>
+            <div class="event-card">
+              <div class="event-card-header"><span class="event-tag workshop">Hi-Tea</span><span
+                  class="material-symbols-outlined">local_cafe</span></div>
+              <h3>Hi-Tea</h3>
+              <p>Refreshments and snacks.</p>
+            </div>
+          </div>
+          <div class="timeline-event animate-fade-in stagger-4">
+            <div class="timeline-time-col"><span class="timeline-time">16:30</span>
+              <div class="timeline-dot muted"></div>
+            </div>
+            <div class="event-card">
+              <div class="event-card-header"><span class="event-tag morning">Free Time</span><span
+                  class="material-symbols-outlined">self_improvement</span></div>
+              <h3>Free Time</h3>
+              <p>4:30 – 7:00 PM relax and explore.</p>
+            </div>
+          </div>
+          <div class="timeline-event animate-fade-in stagger-5">
+            <div class="timeline-time-col"><span class="timeline-time highlight">20:00</span>
+              <div class="timeline-dot large"></div>
+            </div>
+            <div class="event-card">
+              <div class="event-card-header"><span class="event-tag shoot">Game</span><span
+                  class="material-symbols-outlined">sports_esports</span></div>
+              <h3>Game 4</h3>
+              <p>8:00 – 10:00 PM evening game.</p>
+            </div>
+          </div>
+          <div class="timeline-event animate-fade-in stagger-6">
+            <div class="timeline-time-col"><span class="timeline-time">22:00</span>
+              <div class="timeline-dot muted"></div>
+            </div>
+            <div class="event-card featured">
+              <div class="event-card-header"><span class="event-tag lunch">Dinner</span><span
+                  class="material-symbols-outlined">dinner_dining</span></div>
+              <h3>Dinner</h3>
+              <p>Dinner with the crew.</p>
+            </div>
+          </div>
+          <div class="timeline-event animate-fade-in">
+            <div class="timeline-time-col"><span class="timeline-time">23:00</span>
+              <div class="timeline-dot muted"></div>
+            </div>
+            <div class="event-card">
+              <div class="event-card-header"><span class="event-tag workshop">Leisure</span><span
+                  class="material-symbols-outlined">pool</span></div>
+              <h3>Pool</h3>
+              <p>Night swim and chill.</p>
+            </div>
           </div>
         </div>
 
-        <!-- Event 3: 13:00 -->
-        <div class="timeline-event animate-fade-in stagger-3">
-          <div class="timeline-time-col">
-            <span class="timeline-time highlight">13:00</span>
-            <div class="timeline-dot large"></div>
-          </div>
-          <div class="event-card featured">
-            <div class="event-card-header">
-              <span class="event-tag lunch">Lunch Break</span>
-              <span class="material-symbols-outlined">restaurant</span>
+        <!-- === APR 4 (Saturday) === -->
+        <div class="schedule-day" data-schedule-date="apr4" style="display:none;">
+          <div class="timeline-event animate-fade-in stagger-1">
+            <div class="timeline-time-col"><span class="timeline-time">12:00</span>
+              <div class="timeline-dot"></div>
             </div>
-            <h3>Garden Terrace Networking</h3>
-            <p>Organic catering served in the main greenhouse wing.</p>
-            <div class="location-tag">
-              <span class="material-symbols-outlined">location_on</span>
-              Main Greenhouse
+            <div class="event-card featured">
+              <div class="event-card-header"><span class="event-tag lunch">Brunch</span><span
+                  class="material-symbols-outlined">brunch_dining</span></div>
+              <h3>Brunch</h3>
+              <p>Energize for the big day ahead.</p>
+            </div>
+          </div>
+          <div class="timeline-event animate-fade-in stagger-2">
+            <div class="timeline-time-col"><span class="timeline-time highlight">13:00</span>
+              <div class="timeline-dot large"></div>
+            </div>
+            <div class="event-card">
+              <div class="event-card-header"><span class="event-tag morning">Activity</span><span
+                  class="material-symbols-outlined">checkroom</span></div>
+              <h3>Activity 1 — Offsite Dress</h3>
+              <p>Dress up in offsite theme attire.</p>
+            </div>
+          </div>
+          <div class="timeline-event animate-fade-in stagger-3">
+            <div class="timeline-time-col"><span class="timeline-time">16:00</span>
+              <div class="timeline-dot muted"></div>
+            </div>
+            <div class="event-card">
+              <div class="event-card-header"><span class="event-tag workshop">Hi-Tea</span><span
+                  class="material-symbols-outlined">local_cafe</span></div>
+              <h3>Hi-Tea</h3>
+              <p>Afternoon refreshments.</p>
+            </div>
+          </div>
+          <div class="timeline-event animate-fade-in stagger-4">
+            <div class="timeline-time-col"><span class="timeline-time">16:30</span>
+              <div class="timeline-dot muted"></div>
+            </div>
+            <div class="event-card">
+              <div class="event-card-header"><span class="event-tag workshop">Photo</span><span
+                  class="material-symbols-outlined">photo_camera</span></div>
+              <h3>Group Photo</h3>
+              <p>4:30 – 5:00 PM team photo session.</p>
+            </div>
+          </div>
+          <div class="timeline-event animate-fade-in stagger-5">
+            <div class="timeline-time-col"><span class="timeline-time">17:00</span>
+              <div class="timeline-dot muted"></div>
+            </div>
+            <div class="event-card">
+              <div class="event-card-header"><span class="event-tag morning">Prep</span><span
+                  class="material-symbols-outlined">styler</span></div>
+              <h3>Preparation Time</h3>
+              <p>5:00 – 7:00 PM get ready for the evening.</p>
+            </div>
+          </div>
+          <div class="timeline-event animate-fade-in stagger-6">
+            <div class="timeline-time-col"><span class="timeline-time highlight">19:00</span>
+              <div class="timeline-dot large"></div>
+            </div>
+            <div class="event-card featured">
+              <div class="event-card-header"><span class="event-tag shoot">Evening</span><span
+                  class="material-symbols-outlined">celebration</span></div>
+              <h3>The Grand Evening</h3>
+              <p>10-Min Brief Speech · DJ Night · Ghost Party · Surprise Event</p>
+            </div>
+          </div>
+          <div class="timeline-event animate-fade-in">
+            <div class="timeline-time-col"><span class="timeline-time">23:00</span>
+              <div class="timeline-dot muted"></div>
+            </div>
+            <div class="event-card">
+              <div class="event-card-header"><span class="event-tag workshop">Leisure</span><span
+                  class="material-symbols-outlined">pool</span></div>
+              <h3>Pool</h3>
+              <p>Late night pool session.</p>
             </div>
           </div>
         </div>
 
-        <!-- Event 4: 15:30 -->
-        <div class="timeline-event animate-fade-in stagger-4">
-          <div class="timeline-time-col">
-            <span class="timeline-time">15:30</span>
-            <div class="timeline-dot muted"></div>
-          </div>
-          <div class="event-card">
-            <div class="event-card-header">
-              <span class="event-tag shoot">Onsite Shoot</span>
-              <span class="material-symbols-outlined muted">camera_roll</span>
+        <!-- === APR 5 (Sunday) === -->
+        <div class="schedule-day" data-schedule-date="apr5" style="display:none;">
+          <div class="timeline-event animate-fade-in stagger-1">
+            <div class="timeline-time-col"><span class="timeline-time">11:00</span>
+              <div class="timeline-dot"></div>
             </div>
-            <h3>Golden Hour Sequence</h3>
-            <p>Practical filming session at the North Vineyards.</p>
-            <button class="rsvp-btn primary">RSVP NOW</button>
+            <div class="event-card featured">
+              <div class="event-card-header"><span class="event-tag morning">Departure</span><span
+                  class="material-symbols-outlined">flight_takeoff</span></div>
+              <h3>Breakfast &amp; Departure</h3>
+              <p>Farewell breakfast and checkout.</p>
+            </div>
           </div>
         </div>
+
       </div>
       <div class="timeline-glow"></div>
     </div>
@@ -216,22 +413,12 @@
     <div id="people-screen" class="screen people-screen">
       <div class="people-header">
         <div class="people-header-top">
-          <h1>People</h1>
-          <button class="filter-btn">
-            <span class="material-symbols-outlined">filter_list</span>
-          </button>
+          <h1>Participants</h1>
         </div>
         <div class="search-wrapper">
           <span class="material-symbols-outlined">search</span>
-          <input id="people-search" class="search-input" type="text" placeholder="Search cast & crew..." />
+          <input id="people-search" class="search-input" type="text" placeholder="Search participants..." />
         </div>
-      </div>
-
-      <div class="people-filters">
-        <span class="filter-pill active" data-filter="all">All</span>
-        <span class="filter-pill" data-filter="direction">Direction</span>
-        <span class="filter-pill" data-filter="cast">Cast</span>
-        <span class="filter-pill" data-filter="production">Production</span>
       </div>
 
       <div class="people-list">
@@ -442,7 +629,7 @@
       </button>
       <button class="nav-item" data-screen="timeline">
         <span class="material-symbols-outlined">event_note</span>
-        <span class="nav-label">Timeline</span>
+        <span class="nav-label">Schedule</span>
       </button>
       <button class="nav-item" data-screen="people">
         <span class="material-symbols-outlined">group</span>

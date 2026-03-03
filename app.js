@@ -25,27 +25,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const navItems = document.querySelectorAll('.nav-item');
   const bottomNav = document.getElementById('bottom-nav');
-  const progressFill = document.getElementById('progress-fill');
-  const progressPercent = document.getElementById('progress-percent');
 
   // ---- Splash Screen Logic ----
   function runSplash() {
     bottomNav.style.display = 'none';
-    let progress = 0;
-    const interval = setInterval(() => {
-      progress += 1;
-      if (progress > 100) progress = 100;
-      progressFill.style.width = progress + '%';
-      progressPercent.textContent = progress + '%';
-
-      if (progress >= 100) {
-        clearInterval(interval);
-        // Wait a moment then transition
-        setTimeout(() => {
-          navigateTo('home');
-        }, 500);
-      }
-    }, 30);
+    const enterBtn = document.getElementById('splash-enter-btn');
+    if (enterBtn) {
+      enterBtn.addEventListener('click', () => {
+        navigateTo('home');
+      });
+    }
   }
 
   // ---- Navigation Logic ----
@@ -112,26 +101,54 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // ---- Date Pills on Timeline ----
-  const datePills = document.querySelectorAll('.date-pill');
-  datePills.forEach((pill, index) => {
-    pill.addEventListener('click', () => {
-      datePills.forEach(p => p.classList.remove('active'));
-      pill.classList.add('active');
-      currentDatePill = index;
+  // ---- Schedule Tabs (Offsite / Onsite) ----
+  const scheduleTabs = document.querySelectorAll('.schedule-tab');
+  const offsiteDates = document.getElementById('offsite-dates');
+  const onsiteDates = document.getElementById('onsite-dates');
+  const scheduleDays = document.querySelectorAll('.schedule-day');
+
+  function showScheduleDay(dateId) {
+    scheduleDays.forEach(day => {
+      day.style.display = (day.dataset.scheduleDate === dateId) ? 'block' : 'none';
+    });
+  }
+
+  scheduleTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      scheduleTabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      const schedule = tab.dataset.schedule;
+      if (schedule === 'offsite') {
+        offsiteDates.style.display = 'flex';
+        onsiteDates.style.display = 'none';
+        // Select first offsite date
+        const firstPill = offsiteDates.querySelector('.date-pill');
+        offsiteDates.querySelectorAll('.date-pill').forEach(p => p.classList.remove('active'));
+        if (firstPill) { firstPill.classList.add('active'); showScheduleDay(firstPill.dataset.date); }
+      } else {
+        offsiteDates.style.display = 'none';
+        onsiteDates.style.display = 'flex';
+        // Select first onsite date
+        const firstPill = onsiteDates.querySelector('.date-pill');
+        onsiteDates.querySelectorAll('.date-pill').forEach(p => p.classList.remove('active'));
+        if (firstPill) { firstPill.classList.add('active'); showScheduleDay(firstPill.dataset.date); }
+      }
     });
   });
 
-  // ---- Filter Pills on People ----
-  const filterPills = document.querySelectorAll('.filter-pill');
-  filterPills.forEach(pill => {
-    pill.addEventListener('click', () => {
-      filterPills.forEach(p => p.classList.remove('active'));
-      pill.classList.add('active');
-      currentFilter = pill.dataset.filter;
-      filterPeople(currentFilter);
+  // ---- Date Pills on Schedule ----
+  document.querySelectorAll('.date-pills').forEach(container => {
+    const pills = container.querySelectorAll('.date-pill');
+    pills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        pills.forEach(p => p.classList.remove('active'));
+        pill.classList.add('active');
+        showScheduleDay(pill.dataset.date);
+      });
     });
   });
+
+
 
   // ---- People Search ----
   const searchInput = document.getElementById('people-search');
@@ -148,19 +165,6 @@ document.addEventListener('DOMContentLoaded', () => {
           card.style.display = 'none';
         }
       });
-    });
-  }
-
-  // ---- Filter People by Category ----
-  function filterPeople(category) {
-    const cards = document.querySelectorAll('.person-card');
-    cards.forEach(card => {
-      if (category === 'all') {
-        card.style.display = 'flex';
-      } else {
-        const cardCategory = card.dataset.category;
-        card.style.display = (cardCategory === category) ? 'flex' : 'none';
-      }
     });
   }
 
