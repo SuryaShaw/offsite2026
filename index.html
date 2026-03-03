@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Vine Garden Films – Event App 2026</title>
+  <meta name="description" content="Official event app for Vine Garden Films Offsite & Onsite 2026" />
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@100..900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+</head>
+<body>
+<div class="app-shell">
+
+  <!-- ===== SCREEN 1: SPLASH / WELCOME ===== -->
+  <div id="splash-screen" class="screen active splash-active splash-screen">
+    <div class="splash-content">
+      <div class="splash-rings">
+        <div class="splash-ring splash-ring-1"></div>
+        <div class="splash-ring splash-ring-2"></div>
+        <div class="splash-logo-circle">
+          <span class="material-symbols-outlined">movie_filter</span>
+        </div>
+        <span class="material-symbols-outlined splash-vintage-icon">filter_vintage</span>
+      </div>
+      <h1 class="splash-title">Vine Garden <span>Films</span></h1>
+      <div class="splash-subtitle">
+        <p class="label">Event App 2026</p>
+        <p class="event-name">Offsite &amp; Onsite</p>
+      </div>
+    </div>
+
+    <div class="splash-progress">
+      <div>
+        <div class="progress-header">
+          <p class="progress-label">Initializing Cinematic Suite</p>
+          <p class="progress-percent" id="progress-percent">0%</p>
+        </div>
+        <div class="progress-track">
+          <div class="progress-fill" id="progress-fill"></div>
+        </div>
+      </div>
+      <div class="splash-footer">
+        <p class="splash-footer-text">Premium Production Services</p>
+        <div class="splash-footer-line"></div>
+      </div>
+    </div>
+    <div class="vignette"></div>
+    <div class="splash-gradient"></div>
+  </div>
+
+  <!-- ===== SCREEN 2: HOME ===== -->
+  <div id="home-screen" class="screen home-screen">
+    <div class="home-hero">
+      <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDvTYTawqXGUjYBj-v-ly9rfSLi60SADC59cvoj-uY-JyldujhyqyXQ7ysCPwR31pMbGuNOrE4dPCDttuQegQk7Oc-NP06YoiHxvx6ShQr6I60BinlkuL8AogXrAfRZONJxK7Zjd30BkprHZKePPTzjkPhZ558c0sq6oPXZx3ju9lYhhxEy7yiVDXwqGW6-zevZCfEKMJaVa9eWyHmefLXAEMlO-qtHtwolXuYUX4n-wPoyc3_GUTBJIkl4fq-wW9jz3yq_u32py8" alt="Offsite hero" />
+      <div class="home-hero-overlay"></div>
+      <div class="home-hero-content">
+        <p class="brand-label">Vine Garden Films</p>
+        <h1>Offsite &amp; Onsite<br>2026</h1>
+      </div>
+    </div>
+
+    <div class="home-actions">
+      <button class="cta-button animate-slide-up stagger-1" id="cta-offsite">
+        <span>View Offsite Events</span>
+        <span class="material-symbols-outlined">arrow_forward_ios</span>
+      </button>
+      <button class="cta-button animate-slide-up stagger-2" id="cta-onsite">
+        <span>View Onsite Events</span>
+        <span class="material-symbols-outlined">arrow_forward_ios</span>
+      </button>
+    </div>
+
+    <div class="home-features">
+      <div class="features-header">
+        <h3>Featured Highlights</h3>
+        <button class="see-all">SEE ALL</button>
+      </div>
+      <div class="features-carousel">
+        <div class="feature-card animate-fade-in stagger-3">
+          <span class="material-symbols-outlined">movie</span>
+          <p class="title">Screening Gala</p>
+          <p class="meta">Oct 12, 2026 · Main Theater</p>
+        </div>
+        <div class="feature-card animate-fade-in stagger-4">
+          <span class="material-symbols-outlined">groups</span>
+          <p class="title">Director's Workshop</p>
+          <p class="meta">Oct 14, 2026 · Studio A</p>
+        </div>
+        <div class="feature-card animate-fade-in stagger-5">
+          <span class="material-symbols-outlined">auto_awesome</span>
+          <p class="title">Visual Effects Panel</p>
+          <p class="meta">Oct 15, 2026 · Hall 2</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SCREEN 3: TIMELINE / SCHEDULE ===== -->
+  <div id="timeline-screen" class="screen timeline-screen">
+    <div class="timeline-header">
+      <div class="timeline-header-top">
+        <div>
+          <p class="brand-label">Vine Garden Films</p>
+          <h2>Event Timeline</h2>
+        </div>
+        <button class="timeline-calendar-btn">
+          <span class="material-symbols-outlined">calendar_today</span>
+        </button>
+      </div>
+      <div class="date-pills">
+        <div class="date-pill active">
+          <span class="month">Oct</span>
+          <span class="day">14</span>
+        </div>
+        <div class="date-pill">
+          <span class="month">Oct</span>
+          <span class="day">15</span>
+        </div>
+        <div class="date-pill">
+          <span class="month">Oct</span>
+          <span class="day">16</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-body">
+      <div class="timeline-line"></div>
+
+      <!-- Event 1: 08:00 -->
+      <div class="timeline-event animate-fade-in stagger-1">
+        <div class="timeline-time-col">
+          <span class="timeline-time">08:00</span>
+          <div class="timeline-dot"></div>
+        </div>
+        <div class="event-card">
+          <div class="event-card-header">
+            <span class="event-tag morning">Morning Session</span>
+            <span class="material-symbols-outlined">videocam</span>
+          </div>
+          <h3>Director's Welcome Breakfast</h3>
+          <p>Opening ceremony and creative vision for the 2026 production slate.</p>
+          <button class="rsvp-btn primary">RSVP NOW</button>
+        </div>
+      </div>
+
+      <!-- Event 2: 10:30 -->
+      <div class="timeline-event animate-fade-in stagger-2">
+        <div class="timeline-time-col">
+          <span class="timeline-time">10:30</span>
+          <div class="timeline-dot muted"></div>
+        </div>
+        <div class="event-card">
+          <div class="event-card-header">
+            <span class="event-tag workshop">Workshop</span>
+            <span class="material-symbols-outlined muted">movie_edit</span>
+          </div>
+          <h3>Cinematic Lighting Masterclass</h3>
+          <p>Hands-on session with the new RED V-Raptor XL systems.</p>
+          <button class="rsvp-btn secondary">CONFIRMED</button>
+        </div>
+      </div>
+
+      <!-- Event 3: 13:00 -->
+      <div class="timeline-event animate-fade-in stagger-3">
+        <div class="timeline-time-col">
+          <span class="timeline-time highlight">13:00</span>
+          <div class="timeline-dot large"></div>
+        </div>
+        <div class="event-card featured">
+          <div class="event-card-header">
+            <span class="event-tag lunch">Lunch Break</span>
+            <span class="material-symbols-outlined">restaurant</span>
+          </div>
+          <h3>Garden Terrace Networking</h3>
+          <p>Organic catering served in the main greenhouse wing.</p>
+          <div class="location-tag">
+            <span class="material-symbols-outlined">location_on</span>
+            Main Greenhouse
+          </div>
+        </div>
+      </div>
+
+      <!-- Event 4: 15:30 -->
+      <div class="timeline-event animate-fade-in stagger-4">
+        <div class="timeline-time-col">
+          <span class="timeline-time">15:30</span>
+          <div class="timeline-dot muted"></div>
+        </div>
+        <div class="event-card">
+          <div class="event-card-header">
+            <span class="event-tag shoot">Onsite Shoot</span>
+            <span class="material-symbols-outlined muted">camera_roll</span>
+          </div>
+          <h3>Golden Hour Sequence</h3>
+          <p>Practical filming session at the North Vineyards.</p>
+          <button class="rsvp-btn primary">RSVP NOW</button>
+        </div>
+      </div>
+    </div>
+    <div class="timeline-glow"></div>
+  </div>
+
+  <!-- ===== SCREEN 4: PEOPLE ===== -->
+  <div id="people-screen" class="screen people-screen">
+    <div class="people-header">
+      <div class="people-header-top">
+        <h1>People</h1>
+        <button class="filter-btn">
+          <span class="material-symbols-outlined">filter_list</span>
+        </button>
+      </div>
+      <div class="search-wrapper">
+        <span class="material-symbols-outlined">search</span>
+        <input id="people-search" class="search-input" type="text" placeholder="Search cast & crew..." />
+      </div>
+    </div>
+
+    <div class="people-filters">
+      <span class="filter-pill active" data-filter="all">All</span>
+      <span class="filter-pill" data-filter="direction">Direction</span>
+      <span class="filter-pill" data-filter="cast">Cast</span>
+      <span class="filter-pill" data-filter="production">Production</span>
+    </div>
+
+    <div class="people-list">
+      <!-- Felix Arvid -->
+      <div class="person-card animate-fade-in stagger-1" data-category="direction">
+        <div class="person-avatar">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9FbSA8MT-n3OzX9vGOkyd597uY3DYGz34q3y_Y2PSsqE1tAEo2HI4zcthU824maDvY6i9nCakNZCgBjD_s52oE17I54tC7cF1nnAjOSkLQQkmAqnzLiqMiupgoYxnMGiwsIgo-LPFGvLlczFPHx9Ua9k1CYoWG4IfnW8ig2lpdJCfdaK_c9ymIz0UXud5HvQpRjVgmacfWsmhhnGWf4AIl085IDSrooaFR_SfQT7lhjglv8sFyFOVskA7Joxvc5pbLGJOUAs-WyQ" alt="Felix Arvid" />
+          <div class="online-dot"></div>
+        </div>
+        <div class="person-info">
+          <p class="person-name">Felix Arvid</p>
+          <p class="person-role">Creative Director</p>
+        </div>
+        <span class="material-symbols-outlined chevron">chevron_right</span>
+      </div>
+
+      <!-- Elena Rossi -->
+      <div class="person-card animate-fade-in stagger-2" data-category="production">
+        <div class="person-avatar">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsUtt3SSngNzLJPmUXXmezex2EE6HQAFUjZDNIfeukAeMODp8tW1a87UdlBMP21ENaaJdWGHgDkcW3e1U91CQn0OVvSg05U5fHWpmtwgBhYmswQg9JzOzJA7P6cIKQy0EASfnPJe5h2FHGRRdsrA4hfgdsU6VpzuTMkD1Oh2UnPHniGAYDIGPMpxRkZ0avSPmh32ZLpOWGPHG757Q8okisv6hKYqmM0dcL2XYkMQJAO69hOZdTYShY-ZpVI8ld6O1xRJX_oo3MDSo" alt="Elena Rossi" />
+          <div class="online-dot"></div>
+        </div>
+        <div class="person-info">
+          <p class="person-name">Elena Rossi</p>
+          <p class="person-role">Executive Producer</p>
+        </div>
+        <span class="material-symbols-outlined chevron">chevron_right</span>
+      </div>
+
+      <!-- Julian Chen -->
+      <div class="person-card animate-fade-in stagger-3" data-category="cast">
+        <div class="person-avatar">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3YtckDb-kuVxasTXlWueZM-KpS8pdkeWG7FY85tFoJNO9hwimmmZiF_4Yu0LoH4vphiaA90H2GgQViyhezg3qAR5qmVW2aOYDN6duz3wkvGsTonJiCs0E570zeLYIWOClwrsRDe6--VXKdp0YlVOO6C209s6MIMGt5qxS1Qc3-vdTeojtqU-Ow4rISYfGQ6MXytEDa0rVTNNTlmv7_ealJ29PG2SAXs4FT1k2WsEuzPkCAw9hJiyAz0Tql9phAFraUYNW79N_FoE" alt="Julian Chen" />
+        </div>
+        <div class="person-info">
+          <p class="person-name">Julian Chen</p>
+          <p class="person-role">Cinematographer</p>
+        </div>
+        <span class="material-symbols-outlined chevron">chevron_right</span>
+      </div>
+
+      <!-- Sarah Thorne -->
+      <div class="person-card animate-fade-in stagger-4" data-category="cast">
+        <div class="person-avatar">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDaPYz-dkG5aUo5Z3Ae75ioqzyUp5G3slRthF4oDM2WO3TG3g65fZ7CS-L5PdFIC03XIKZCyDFjOg2nrMf1lNHneIPUZa-JpyOQx4-Tbxz1GSNP4mkbut11_m_LjHRIVju4ZXf2w2v8ixqz6ODQZ4Q7nX36LGRQyWcifXIAt_I90CsHWja7CZvBoaKoQM-g9Kkb8hLk-2C_fsrjDieM93F6ytKqijgUewhwwoMCw-yflg2ZLZn48DYcpTbdcf04btMncpLJg20sGlA" alt="Sarah Thorne" />
+          <div class="online-dot"></div>
+        </div>
+        <div class="person-info">
+          <p class="person-name">Sarah Thorne</p>
+          <p class="person-role">Screenwriter</p>
+        </div>
+        <span class="material-symbols-outlined chevron">chevron_right</span>
+      </div>
+
+      <!-- Marcus Vane -->
+      <div class="person-card animate-fade-in stagger-5" data-category="production">
+        <div class="person-avatar">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnolb4piSJP5ATFxdjESP7rB0TVCLjkRD2MH448B3OUOwkCaxCIY64RcRjdVdl6t_uIknQfmGlwV_A1oBtvlXvRRd_6d7ToNtl5oHKYOJrqQeLqvUJB26S2xedEG19T3TyhsYOBbmjvMqye0nd1TwbqmSiZJZYk8sVaAZyyQkTkSiJY4G9JiTFknVqc9Jbah4mCp6D3Dg82TP5lqed_0-rjUUx7C7WyEO1hDx4RTh8yytdxmD57vgDCx9NR8knUip98Losk-YtqQg" alt="Marcus Vane" />
+        </div>
+        <div class="person-info">
+          <p class="person-name">Marcus Vane</p>
+          <p class="person-role">Lead Editor</p>
+        </div>
+        <span class="material-symbols-outlined chevron">chevron_right</span>
+      </div>
+    </div>
+
+    <div class="ambient-glow-tr"></div>
+    <div class="ambient-glow-bl"></div>
+  </div>
+
+  <!-- ===== SCREEN 5: HELP & SUPPORT ===== -->
+  <div id="help-screen" class="screen help-screen">
+    <div class="help-header">
+      <div class="help-header-row">
+        <span class="material-symbols-outlined brand-icon">movie_filter</span>
+        <h1>Help &amp; Support</h1>
+        <div class="spacer"></div>
+      </div>
+      <p class="brand-text">Vine Garden Films: 2026</p>
+    </div>
+
+    <div class="help-body">
+      <!-- Direct Assistance -->
+      <section>
+        <div class="help-section-title">
+          <div class="bar"></div>
+          <h2>Direct Assistance</h2>
+        </div>
+        <button class="help-action">
+          <div class="help-action-left">
+            <div class="help-action-icon">
+              <span class="material-symbols-outlined">headset_mic</span>
+            </div>
+            <div class="help-action-text">
+              <p class="title">Contact Support</p>
+              <p class="subtitle">Onsite help available 24/7</p>
+            </div>
+          </div>
+          <span class="material-symbols-outlined chevron">chevron_right</span>
+        </button>
+        <button class="help-action">
+          <div class="help-action-left">
+            <div class="help-action-icon">
+              <span class="material-symbols-outlined">chat_bubble</span>
+            </div>
+            <div class="help-action-text">
+              <p class="title">Live Production Chat</p>
+              <p class="subtitle">Response time: &lt; 2 mins</p>
+            </div>
+          </div>
+          <span class="material-symbols-outlined chevron">chevron_right</span>
+        </button>
+      </section>
+
+      <!-- Venue & Logistics -->
+      <section>
+        <div class="help-section-title">
+          <div class="bar"></div>
+          <h2>Venue &amp; Logistics</h2>
+        </div>
+        <div class="venue-card">
+          <div class="venue-map">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmZ5Hz14Nvmw0IQ5aygsOsEUWWla1qQP-2rqFelkhK7AMbNKDTMLu2QPoSfZQCRJOdhlOhT9MwCcnaBhIXa7KPCQXUxdGLPpdBp0CAHxu5whDfpem-0H3N7ufND-8pRk1ErfASEM8Qj3JfhXwRBrzgcSRrFdjyMxHue1rXRP37OBWTh-Us7hlYJcdjnWO2f1TZtU-7CUByUoWoYSehkKWTXrRJMvsi4uujUz874wvCGzuWzE-hvFGQk3STylULQfebalsH46XAd8Q" alt="Venue Map" />
+            <div class="venue-map-gradient"></div>
+            <button class="venue-map-btn">
+              <span class="material-symbols-outlined">map</span>
+              View Interactive Map
+            </button>
+          </div>
+          <div class="venue-links">
+            <button class="venue-link">
+              <div class="venue-link-left">
+                <span class="material-symbols-outlined">directions_bus</span>
+                <span>Shuttle Schedule</span>
+              </div>
+              <span class="material-symbols-outlined arrow">arrow_forward</span>
+            </button>
+            <div class="venue-divider"></div>
+            <button class="venue-link">
+              <div class="venue-link-left">
+                <span class="material-symbols-outlined">location_on</span>
+                <span>Parking Directions</span>
+              </div>
+              <span class="material-symbols-outlined arrow">arrow_forward</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Essential Resources -->
+      <section>
+        <div class="help-section-title">
+          <div class="bar"></div>
+          <h2>Essential Resources</h2>
+        </div>
+        <div class="resource-card">
+          <div class="resource-icon">
+            <span class="material-symbols-outlined">quiz</span>
+          </div>
+          <div class="resource-info">
+            <p class="title">FAQs</p>
+            <p class="subtitle">Wifi, catering, and accommodations</p>
+          </div>
+          <span class="material-symbols-outlined external-icon">open_in_new</span>
+        </div>
+        <div class="resource-card">
+          <div class="resource-icon">
+            <span class="material-symbols-outlined">gavel</span>
+          </div>
+          <div class="resource-info">
+            <p class="title">Event Policies</p>
+            <p class="subtitle">Production conduct &amp; NDAs</p>
+          </div>
+          <span class="material-symbols-outlined external-icon">open_in_new</span>
+        </div>
+        <div class="resource-card">
+          <div class="resource-icon emergency">
+            <span class="material-symbols-outlined">medical_services</span>
+          </div>
+          <div class="resource-info">
+            <p class="title">Emergency Info</p>
+            <p class="subtitle">Medics &amp; Security contacts</p>
+          </div>
+          <span class="material-symbols-outlined external-icon">open_in_new</span>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!-- ===== BOTTOM NAVIGATION ===== -->
+  <nav id="bottom-nav" class="bottom-nav" style="display: none;">
+    <button class="nav-item active" data-screen="home">
+      <span class="material-symbols-outlined">home</span>
+      <span class="nav-label">Home</span>
+    </button>
+    <button class="nav-item" data-screen="timeline">
+      <span class="material-symbols-outlined">event_note</span>
+      <span class="nav-label">Timeline</span>
+    </button>
+    <button class="nav-item" data-screen="people">
+      <span class="material-symbols-outlined">group</span>
+      <span class="nav-label">People</span>
+    </button>
+    <button class="nav-item" data-screen="help">
+      <span class="material-symbols-outlined">help_outline</span>
+      <span class="nav-label">Help</span>
+    </button>
+  </nav>
+
+</div>
+<script src="app.js"></script>
+</body>
+</html>

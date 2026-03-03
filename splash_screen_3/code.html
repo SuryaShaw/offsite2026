@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#6ab92e",
+                        "background-light": "#f7f8f6",
+                        "background-dark": "#000000",
+                        "accent-green": "#16541E"
+                    },
+                    fontFamily: {
+                        "display": ["Epilogue"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer base {
+            body {
+                @apply font-display bg-[#000000] text-white antialiased;
+                margin: 0;
+                padding: 0;
+            }
+        }
+        .vignette-overlay {
+            background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.9) 100%);
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-black">
+<div class="relative flex flex-col min-h-screen w-full bg-black">
+<div class="fixed top-0 left-0 w-full flex justify-between px-8 py-3 text-xs font-medium z-50 bg-black/40 backdrop-blur-md">
+<span>9:41</span>
+<div class="flex gap-1.5 items-center">
+<span class="material-symbols-outlined text-sm">signal_cellular_4_bar</span>
+<span class="material-symbols-outlined text-sm">wifi</span>
+<span class="material-symbols-outlined text-sm">battery_full</span>
+</div>
+</div>
+<main class="flex-1 pb-32">
+<div class="relative w-full h-[48vh] overflow-hidden">
+<img alt="Cinematic background" class="w-full h-full object-cover opacity-60" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDvTYTawqXGUjYBj-v-ly9rfSLi60SADC59cvoj-uY-JyldujhyqyXQ7ysCPwR31pMbGuNOrE4dPCDttuQegQk7Oc-NP06YoiHxvx6ShQr6I60BinlkuL8AogXrAfRZONJxK7Zjd30BkprHZKePPTzjkPhZ558c0sq6oPXZx3ju9lYhhxEy7yiVDXwqGW6-zevZCfEKMJaVa9eWyHmefLXAEMlO-qtHtwolXuYUX4n-wPoyc3_GUTBJIkl4fq-wW9jz3yq_u32py8"/>
+<div class="absolute inset-0 vignette-overlay"></div>
+<div class="absolute bottom-8 left-6">
+<p class="text-primary font-bold tracking-[0.2em] text-[10px] mb-2 uppercase">Vine Garden Films</p>
+<h1 class="text-4xl font-bold tracking-tight">Offsite &amp; Onsite 2026</h1>
+</div>
+</div>
+<div class="px-6 mt-8 space-y-4">
+<button class="w-full bg-primary hover:bg-primary/90 text-black font-bold py-4 px-6 rounded-xl flex items-center justify-between transition-all active:scale-[0.98]">
+<span class="text-lg">View Offsite Events</span>
+<span class="material-symbols-outlined font-bold">arrow_forward_ios</span>
+</button>
+<button class="w-full bg-primary hover:bg-primary/90 text-black font-bold py-4 px-6 rounded-xl flex items-center justify-between transition-all active:scale-[0.98]">
+<span class="text-lg">View Onsite Events</span>
+<span class="material-symbols-outlined font-bold">arrow_forward_ios</span>
+</button>
+</div>
+<div class="px-6 mt-12">
+<div class="flex justify-between items-end mb-5">
+<h3 class="text-xs font-bold uppercase tracking-widest text-zinc-500">Featured Highlights</h3>
+<span class="text-primary text-xs font-bold">SEE ALL</span>
+</div>
+<div class="flex gap-4 overflow-x-auto pb-4 no-scrollbar">
+<div class="min-w-[220px] h-36 bg-zinc-900/50 rounded-xl p-5 border border-zinc-800 flex flex-col justify-end">
+<span class="material-symbols-outlined text-primary mb-3">movie</span>
+<p class="text-base font-semibold">Screening Gala</p>
+<p class="text-xs text-zinc-500 font-medium">Oct 12, 2026 • Main Theater</p>
+</div>
+<div class="min-w-[220px] h-36 bg-zinc-900/50 rounded-xl p-5 border border-zinc-800 flex flex-col justify-end">
+<span class="material-symbols-outlined text-primary mb-3">groups</span>
+<p class="text-base font-semibold">Director's Workshop</p>
+<p class="text-xs text-zinc-500 font-medium">Oct 14, 2026 • Studio A</p>
+</div>
+<div class="min-w-[220px] h-36 bg-zinc-900/50 rounded-xl p-5 border border-zinc-800 flex flex-col justify-end">
+<span class="material-symbols-outlined text-primary mb-3">auto_awesome</span>
+<p class="text-base font-semibold">Visual Effects Panel</p>
+<p class="text-xs text-zinc-500 font-medium">Oct 15, 2026 • Hall 2</p>
+</div>
+</div>
+</div>
+</main>
+<nav class="fixed bottom-0 left-0 w-full bg-black/95 backdrop-blur-xl border-t border-zinc-800/50 px-6 pt-3 pb-8 flex justify-between items-center z-50">
+<div class="flex flex-col items-center gap-1.5 text-primary min-w-[64px]">
+<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">Home</span>
+</div>
+<div class="flex flex-col items-center gap-1.5 text-zinc-500 min-w-[64px]">
+<span class="material-symbols-outlined text-[28px]">timeline</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">Timeline</span>
+</div>
+<div class="flex flex-col items-center gap-1.5 text-zinc-500 min-w-[64px]">
+<span class="material-symbols-outlined text-[28px]">group</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">People</span>
+</div>
+<div class="flex flex-col items-center gap-1.5 text-zinc-500 min-w-[64px]">
+<span class="material-symbols-outlined text-[28px]">help_outline</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">Help</span>
+</div>
+</nav>
+<div class="fixed bottom-0 left-0 w-full h-[34px] bg-transparent pointer-events-none z-[60] flex justify-center items-center">
+<div class="w-32 h-1 bg-zinc-800 rounded-full"></div>
+</div>
+</div>
+<div class="hidden" data-alt="Cinematic home screen for Vine Garden Films event with high contrast black theme, neon green buttons and standard four-item navigation"></div>
+
+</body></html>

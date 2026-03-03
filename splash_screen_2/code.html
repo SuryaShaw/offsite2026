@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#6ab92e",
+                        "background-light": "#f7f8f6",
+                        "background-dark": "#000000",
+                        "card-dark": "#0a0a0a",
+                        "accent-green": "#16541E"
+                    },
+                    fontFamily: {
+                        "display": ["Epilogue"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        body {
+            font-family: 'Epilogue', sans-serif;
+            background-color: #000000;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .ios-blur {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-[#000000] font-display text-slate-100">
+<div class="relative flex flex-col min-h-screen w-full bg-[#000000] max-w-[430px] mx-auto overflow-hidden">
+<div class="sticky top-0 z-50 bg-black/80 ios-blur w-full flex justify-between px-8 py-4 text-xs font-medium">
+<span>9:41</span>
+<div class="flex gap-1.5 items-center">
+<span class="material-symbols-outlined text-[16px]">signal_cellular_4_bar</span>
+<span class="material-symbols-outlined text-[16px]">wifi</span>
+<span class="material-symbols-outlined text-[16px]">battery_full</span>
+</div>
+</div>
+<header class="px-6 py-4 flex flex-col gap-4 bg-[#000000]">
+<div class="flex justify-between items-center">
+<h1 class="text-2xl font-bold tracking-tight text-white">People</h1>
+<div class="w-10 h-10 rounded-full bg-slate-900/50 flex items-center justify-center border border-white/10">
+<span class="material-symbols-outlined text-white text-xl">filter_list</span>
+</div>
+</div>
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-500 text-xl font-light">search</span>
+<input class="w-full bg-[#0a0a0a] border border-white/10 rounded-xl py-3.5 pl-12 pr-4 text-sm focus:ring-1 focus:ring-primary/50 focus:border-primary/50 outline-none transition-all placeholder:text-slate-600" placeholder="Search cast &amp; crew..." type="text"/>
+</div>
+</header>
+<main class="flex-1 overflow-y-auto px-6 pb-28 hide-scrollbar">
+<div class="flex gap-2 overflow-x-auto hide-scrollbar mb-6">
+<span class="px-5 py-1.5 bg-primary text-black text-[11px] font-bold rounded-full whitespace-nowrap uppercase tracking-wider">All</span>
+<span class="px-5 py-1.5 bg-[#0a0a0a] border border-white/10 text-slate-400 text-[11px] font-medium rounded-full whitespace-nowrap uppercase tracking-wider">Direction</span>
+<span class="px-5 py-1.5 bg-[#0a0a0a] border border-white/10 text-slate-400 text-[11px] font-medium rounded-full whitespace-nowrap uppercase tracking-wider">Cast</span>
+<span class="px-5 py-1.5 bg-[#0a0a0a] border border-white/10 text-slate-400 text-[11px] font-medium rounded-full whitespace-nowrap uppercase tracking-wider">Production</span>
+</div>
+<div class="grid grid-cols-1 gap-3">
+<div class="flex items-center gap-4 p-4 bg-[#0a0a0a] border border-white/5 rounded-2xl">
+<div class="relative">
+<div class="w-14 h-14 rounded-full bg-slate-800 overflow-hidden ring-1 ring-white/10">
+<img alt="Felix" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9FbSA8MT-n3OzX9vGOkyd597uY3DYGz34q3y_Y2PSsqE1tAEo2HI4zcthU824maDvY6i9nCakNZCgBjD_s52oE17I54tC7cF1nnAjOSkLQQkmAqnzLiqMiupgoYxnMGiwsIgo-LPFGvLlczFPHx9Ua9k1CYoWG4IfnW8ig2lpdJCfdaK_c9ymIz0UXud5HvQpRjVgmacfWsmhhnGWf4AIl085IDSrooaFR_SfQT7lhjglv8sFyFOVskA7Joxvc5pbLGJOUAs-WyQ"/>
+</div>
+<div class="absolute -bottom-0.5 -right-0.5 w-4 h-4 bg-primary rounded-full border-2 border-black"></div>
+</div>
+<div class="flex-1">
+<h3 class="text-[14px] font-bold text-white uppercase tracking-wider">Felix Arvid</h3>
+<p class="text-[10px] text-primary font-semibold tracking-widest uppercase mt-0.5">Creative Director</p>
+</div>
+<span class="material-symbols-outlined text-slate-700">chevron_right</span>
+</div>
+<div class="flex items-center gap-4 p-4 bg-[#0a0a0a] border border-white/5 rounded-2xl">
+<div class="relative">
+<div class="w-14 h-14 rounded-full bg-slate-800 overflow-hidden ring-1 ring-white/10">
+<img alt="Elena" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsUtt3SSngNzLJPmUXXmezex2EE6HQAFUjZDNIfeukAeMODp8tW1a87UdlBMP21ENaaJdWGHgDkcW3e1U91CQn0OVvSg05U5fHWpmtwgBhYmswQg9JzOzJA7P6cIKQy0EASfnPJe5h2FHGRRdsrA4hfgdsU6VpzuTMkD1Oh2UnPHniGAYDIGPMpxRkZ0avSPmh32ZLpOWGPHG757Q8okisv6hKYqmM0dcL2XYkMQJAO69hOZdTYShY-ZpVI8ld6O1xRJX_oo3MDSo"/>
+</div>
+<div class="absolute -bottom-0.5 -right-0.5 w-4 h-4 bg-primary rounded-full border-2 border-black"></div>
+</div>
+<div class="flex-1">
+<h3 class="text-[14px] font-bold text-white uppercase tracking-wider">Elena Rossi</h3>
+<p class="text-[10px] text-primary font-semibold tracking-widest uppercase mt-0.5">Executive Producer</p>
+</div>
+<span class="material-symbols-outlined text-slate-700">chevron_right</span>
+</div>
+<div class="flex items-center gap-4 p-4 bg-[#0a0a0a] border border-white/5 rounded-2xl">
+<div class="relative">
+<div class="w-14 h-14 rounded-full bg-slate-800 overflow-hidden ring-1 ring-white/10">
+<img alt="Julian" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3YtckDb-kuVxasTXlWueZM-KpS8pdkeWG7FY85tFoJNO9hwimmmZiF_4Yu0LoH4vphiaA90H2GgQViyhezg3qAR5qmVW2aOYDN6duz3wkvGsTonJiCs0E570zeLYIWOClwrsRDe6--VXKdp0YlVOO6C209s6MIMGt5qxS1Qc3-vdTeojtqU-Ow4rISYfGQ6MXytEDa0rVTNNTlmv7_ealJ29PG2SAXs4FT1k2WsEuzPkCAw9hJiyAz0Tql9phAFraUYNW79N_FoE"/>
+</div>
+</div>
+<div class="flex-1">
+<h3 class="text-[14px] font-bold text-white uppercase tracking-wider">Julian Chen</h3>
+<p class="text-[10px] text-primary font-semibold tracking-widest uppercase mt-0.5">Cinematographer</p>
+</div>
+<span class="material-symbols-outlined text-slate-700">chevron_right</span>
+</div>
+<div class="flex items-center gap-4 p-4 bg-[#0a0a0a] border border-white/5 rounded-2xl">
+<div class="relative">
+<div class="w-14 h-14 rounded-full bg-slate-800 overflow-hidden ring-1 ring-white/10">
+<img alt="Sarah" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDaPYz-dkG5aUo5Z3Ae75ioqzyUp5G3slRthF4oDM2WO3TG3g65fZ7CS-L5PdFIC03XIKZCyDFjOg2nrMf1lNHneIPUZa-JpyOQx4-Tbxz1GSNP4mkbut11_m_LjHRIVju4ZXf2w2v8ixqz6ODQZ4Q7nX36LGRQyWcifXIAt_I90CsHWja7CZvBoaKoQM-g9Kkb8hLk-2C_fsrjDieM93F6ytKqijgUewhwwoMCw-yflg2ZLZn48DYcpTbdcf04btMncpLJg20sGlA"/>
+</div>
+<div class="absolute -bottom-0.5 -right-0.5 w-4 h-4 bg-primary rounded-full border-2 border-black"></div>
+</div>
+<div class="flex-1">
+<h3 class="text-[14px] font-bold text-white uppercase tracking-wider">Sarah Thorne</h3>
+<p class="text-[10px] text-primary font-semibold tracking-widest uppercase mt-0.5">Screenwriter</p>
+</div>
+<span class="material-symbols-outlined text-slate-700">chevron_right</span>
+</div>
+<div class="flex items-center gap-4 p-4 bg-[#0a0a0a] border border-white/5 rounded-2xl">
+<div class="relative">
+<div class="w-14 h-14 rounded-full bg-slate-800 overflow-hidden ring-1 ring-white/10">
+<img alt="Marcus" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnolb4piSJP5ATFxdjESP7rB0TVCLjkRD2MH448B3OUOwkCaxCIY64RcRjdVdl6t_uIknQfmGlwV_A1oBtvlXvRRd_6d7ToNtl5oHKYOJrqQeLqvUJB26S2xedEG19T3TyhsYOBbmjvMqye0nd1TwbqmSiZJZYk8sVaAZyyQkTkSiJY4G9JiTFknVqc9Jbah4mCp6D3Dg82TP5lqed_0-rjUUx7C7WyEO1hDx4RTh8yytdxmD57vgDCx9NR8knUip98Losk-YtqQg"/>
+</div>
+</div>
+<div class="flex-1">
+<h3 class="text-[14px] font-bold text-white uppercase tracking-wider">Marcus Vane</h3>
+<p class="text-[10px] text-primary font-semibold tracking-widest uppercase mt-0.5">Lead Editor</p>
+</div>
+<span class="material-symbols-outlined text-slate-700">chevron_right</span>
+</div>
+</div>
+</main>
+<nav class="fixed bottom-0 left-0 right-0 max-w-[430px] mx-auto bg-black/95 ios-blur border-t border-white/10 px-6 py-3 pb-8 flex justify-between items-center z-50">
+<div class="flex flex-col items-center gap-1.5 text-slate-500 w-1/4">
+<span class="material-symbols-outlined text-2xl font-light">home</span>
+<span class="text-[9px] font-bold uppercase tracking-[0.15em]">Home</span>
+</div>
+<div class="flex flex-col items-center gap-1.5 text-slate-500 w-1/4">
+<span class="material-symbols-outlined text-2xl font-light">auto_graph</span>
+<span class="text-[9px] font-bold uppercase tracking-[0.15em]">Timeline</span>
+</div>
+<div class="flex flex-col items-center gap-1.5 text-primary w-1/4">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">group</span>
+<span class="text-[9px] font-bold uppercase tracking-[0.15em]">People</span>
+</div>
+<div class="flex flex-col items-center gap-1.5 text-slate-500 w-1/4">
+<span class="material-symbols-outlined text-2xl font-light">help_outline</span>
+<span class="text-[9px] font-bold uppercase tracking-[0.15em]">Help</span>
+</div>
+</nav>
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-[100px] pointer-events-none"></div>
+<div class="absolute bottom-20 left-0 w-48 h-48 bg-accent-green/5 rounded-full blur-[80px] pointer-events-none"></div>
+</div>
+
+</body></html>
