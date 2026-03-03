@@ -1,0 +1,1 @@
+The scrolling issues on `.home-screen` were successfully fixed across boundaries by fixing height on container items matching 100dvh rules rather than letting flex parent expand dynamically preventing vertical scrolls.
