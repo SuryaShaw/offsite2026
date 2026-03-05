@@ -13,7 +13,7 @@
   --accent-green-rgb: 22, 84, 30;
   --bg-dark: #000000;
   --card-dark: #0a0a0a;
-  --gold: #D4AF37;
+  --gold: #6ab92e;
   --font-display: 'Epilogue', sans-serif;
   --radius-sm: 0.25rem;
   --radius-md: 0.5rem;
@@ -661,11 +661,11 @@ body {
   font-size: 11px;
   font-weight: 700;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--primary) !important;
 }
 
 .timeline-time.highlight {
-  color: var(--primary);
+  color: var(--primary) !important;
 }
 
 .timeline-dot {
@@ -680,8 +680,8 @@ body {
 }
 
 .timeline-dot.muted {
-  background: var(--accent-green);
-  box-shadow: none;
+  background: var(--primary) !important;
+  box-shadow: 0 0 8px var(--primary) !important;
 }
 
 .timeline-dot.large {
