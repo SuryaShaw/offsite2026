@@ -16,6 +16,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@100..900&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
     rel="stylesheet" />
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-database-compat.js"></script>
 </head>
 
 <body>
@@ -64,23 +68,26 @@
       <div class="home-features">
         <div class="features-header">
           <h3>Featured Highlights</h3>
-          <button class="see-all">SEE ALL</button>
+          <button class="see-all">See All</button>
         </div>
         <div class="features-carousel">
           <div class="feature-card animate-fade-in stagger-3">
-            <span class="material-symbols-outlined">movie</span>
-            <p class="title">Screening Gala</p>
-            <p class="meta">Oct 12, 2026 · Main Theater</p>
+            <span class="material-symbols-outlined">celebration</span>
+            <p class="title">Ghost Theme Party</p>
+            <p class="meta">Apr 4 · The Grand Evening</p>
+            <p class="desc">Dress up in spooky costumes for a night of thrills and surprises.</p>
           </div>
           <div class="feature-card animate-fade-in stagger-4">
-            <span class="material-symbols-outlined">groups</span>
-            <p class="title">Director's Workshop</p>
-            <p class="meta">Oct 14, 2026 · Studio A</p>
+            <span class="material-symbols-outlined">theater_comedy</span>
+            <p class="title">The VGF Show</p>
+            <p class="meta">Apr 4 · 1:00 PM</p>
+            <p class="desc">The main event showcase — performances, speeches, and fun.</p>
           </div>
           <div class="feature-card animate-fade-in stagger-5">
-            <span class="material-symbols-outlined">auto_awesome</span>
-            <p class="title">Visual Effects Panel</p>
-            <p class="meta">Oct 15, 2026 · Hall 2</p>
+            <span class="material-symbols-outlined">movie</span>
+            <p class="title">Movie</p>
+            <p class="meta">Apr 3 · 4:30 PM</p>
+            <p class="desc">Sit back, relax, and enjoy a movie screening with the team.</p>
           </div>
         </div>
       </div>
@@ -424,7 +431,6 @@
             <p class="person-name">Nikhil</p>
             <p class="person-role">Delhi</p>
           </div>
-          <span class="material-symbols-outlined chevron">chevron_right</span>
         </div>
 
         <!-- Shivangi -->
@@ -436,7 +442,6 @@
             <p class="person-name">Shivangi</p>
             <p class="person-role">Delhi</p>
           </div>
-          <span class="material-symbols-outlined chevron">chevron_right</span>
         </div>
 
         <!-- Nitish -->
@@ -448,7 +453,6 @@
             <p class="person-name">Nitish</p>
             <p class="person-role">Delhi</p>
           </div>
-          <span class="material-symbols-outlined chevron">chevron_right</span>
         </div>
 
         <!-- Asha Uniyal -->
@@ -461,7 +465,6 @@
             <p class="person-name">Asha Uniyal</p>
             <p class="person-role">Delhi</p>
           </div>
-          <span class="material-symbols-outlined chevron">chevron_right</span>
         </div>
 
         <!-- Manya -->
@@ -473,7 +476,6 @@
             <p class="person-name">Manya</p>
             <p class="person-role">Chandigarh</p>
           </div>
-          <span class="material-symbols-outlined chevron">chevron_right</span>
         </div>
 
         <!-- Naman -->
@@ -485,7 +487,6 @@
             <p class="person-name">Naman</p>
             <p class="person-role">Chandigarh</p>
           </div>
-          <span class="material-symbols-outlined chevron">chevron_right</span>
         </div>
 
         <!-- Rachit -->
@@ -497,7 +498,6 @@
             <p class="person-name">Rachit</p>
             <p class="person-role">Chandigarh</p>
           </div>
-          <span class="material-symbols-outlined chevron">chevron_right</span>
         </div>
 
         <!-- Surya -->
@@ -509,7 +509,6 @@
             <p class="person-name">Surya</p>
             <p class="person-role">Kolkata</p>
           </div>
-          <span class="material-symbols-outlined chevron">chevron_right</span>
         </div>
 
         <!-- Sulagna -->
@@ -521,7 +520,6 @@
             <p class="person-name">Sulagna</p>
             <p class="person-role">Kolkata</p>
           </div>
-          <span class="material-symbols-outlined chevron">chevron_right</span>
         </div>
 
         <!-- Ved -->
@@ -533,7 +531,6 @@
             <p class="person-name">Ved</p>
             <p class="person-role">Kolkata</p>
           </div>
-          <span class="material-symbols-outlined chevron">chevron_right</span>
         </div>
 
         <!-- Kiran Shinde -->
@@ -546,7 +543,6 @@
             <p class="person-name">Kiran Shinde</p>
             <p class="person-role">Pune</p>
           </div>
-          <span class="material-symbols-outlined chevron">chevron_right</span>
         </div>
 
         <!-- Anand Harish Makwana -->
@@ -559,7 +555,6 @@
             <p class="person-name">Anand Harish Makwana</p>
             <p class="person-role">Pune</p>
           </div>
-          <span class="material-symbols-outlined chevron">chevron_right</span>
         </div>
 
         <!-- Sunil -->
@@ -571,7 +566,6 @@
             <p class="person-name">Sunil</p>
             <p class="person-role">Mumbai</p>
           </div>
-          <span class="material-symbols-outlined chevron">chevron_right</span>
         </div>
 
         <!-- Hrishikesh -->
@@ -584,7 +578,6 @@
             <p class="person-name">Hrishikesh</p>
             <p class="person-role">Mumbai</p>
           </div>
-          <span class="material-symbols-outlined chevron">chevron_right</span>
         </div>
 
         <!-- Karan -->
@@ -596,7 +589,6 @@
             <p class="person-name">Karan</p>
             <p class="person-role">Mumbai</p>
           </div>
-          <span class="material-symbols-outlined chevron">chevron_right</span>
         </div>
 
         <!-- Radhika -->
@@ -608,7 +600,6 @@
             <p class="person-name">Radhika</p>
             <p class="person-role">Mumbai</p>
           </div>
-          <span class="material-symbols-outlined chevron">chevron_right</span>
         </div>
 
         <!-- Harsh -->
@@ -620,7 +611,6 @@
             <p class="person-name">Harsh</p>
             <p class="person-role">Mumbai</p>
           </div>
-          <span class="material-symbols-outlined chevron">chevron_right</span>
         </div>
 
         <!-- Vedant -->
@@ -632,7 +622,6 @@
             <p class="person-name">Vedant</p>
             <p class="person-role">Mumbai</p>
           </div>
-          <span class="material-symbols-outlined chevron">chevron_right</span>
         </div>
 
         <!-- Yusuf -->
@@ -644,7 +633,6 @@
             <p class="person-name">Yusuf</p>
             <p class="person-role">Mumbai</p>
           </div>
-          <span class="material-symbols-outlined chevron">chevron_right</span>
         </div>
 
         <!-- Monty -->
@@ -656,7 +644,6 @@
             <p class="person-name">Monty</p>
             <p class="person-role">Indore</p>
           </div>
-          <span class="material-symbols-outlined chevron">chevron_right</span>
         </div>
 
         <!-- Nitin -->
@@ -668,7 +655,6 @@
             <p class="person-name">Nitin</p>
             <p class="person-role">Indore</p>
           </div>
-          <span class="material-symbols-outlined chevron">chevron_right</span>
         </div>
 
         <!-- Saisha -->
@@ -680,7 +666,6 @@
             <p class="person-name">Saisha</p>
             <p class="person-role">Bangalore</p>
           </div>
-          <span class="material-symbols-outlined chevron">chevron_right</span>
         </div>
 
         <!-- Karthik -->
@@ -692,7 +677,6 @@
             <p class="person-name">Karthik</p>
             <p class="person-role">Hyderabad</p>
           </div>
-          <span class="material-symbols-outlined chevron">chevron_right</span>
         </div>
       </div>
 
@@ -821,6 +805,50 @@
       </div>
     </div>
 
+    <!-- ===== SCREEN 6: CHAT ===== -->
+    <div id="chat-screen" class="screen chat-screen">
+      <!-- Name Setup Overlay -->
+      <div id="chat-name-overlay" class="chat-name-overlay">
+        <div class="chat-name-card">
+          <span class="material-symbols-outlined chat-name-icon">person</span>
+          <h2>Welcome to Chat</h2>
+          <p>Enter your name to start chatting with the team.</p>
+          <input id="chat-name-input" class="chat-name-field" type="text" placeholder="Your name..." maxlength="30" />
+          <button id="chat-name-submit" class="chat-name-btn">Join Chat</button>
+        </div>
+      </div>
+
+      <!-- Chat Header -->
+      <div class="chat-header">
+        <div class="chat-header-top">
+          <div>
+            <p class="brand-label">VineGarden Films</p>
+            <h2>Team Chat</h2>
+          </div>
+          <div class="chat-online">
+            <span class="chat-online-dot"></span>
+            <span class="chat-online-text">Live</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Chat Messages -->
+      <div class="chat-messages" id="chat-messages">
+        <div class="chat-welcome-msg">
+          <span class="material-symbols-outlined">forum</span>
+          <p>Welcome to the VGF team chat! Messages are shared with all participants.</p>
+        </div>
+      </div>
+
+      <!-- Chat Input -->
+      <div class="chat-input-bar">
+        <input id="chat-input" class="chat-input-field" type="text" placeholder="Type a message..." maxlength="500" />
+        <button id="chat-send-btn" class="chat-send-btn">
+          <span class="material-symbols-outlined">send</span>
+        </button>
+      </div>
+    </div>
+
     <!-- ===== BOTTOM NAVIGATION ===== -->
     <nav id="bottom-nav" class="bottom-nav" style="display: none;">
       <button class="nav-item active" data-screen="home">
@@ -834,6 +862,10 @@
       <button class="nav-item" data-screen="people">
         <span class="material-symbols-outlined">group</span>
         <span class="nav-label">People</span>
+      </button>
+      <button class="nav-item" data-screen="chat">
+        <span class="material-symbols-outlined">chat</span>
+        <span class="nav-label">Chat</span>
       </button>
       <button class="nav-item" data-screen="help">
         <span class="material-symbols-outlined">help_outline</span>
