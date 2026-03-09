@@ -629,11 +629,11 @@ body {
 
 .timeline-line {
   position: absolute;
-  left: 47px;
+  left: 45px;
   top: 24px;
   bottom: 24px;
   width: 2px;
-  background: linear-gradient(180deg, var(--accent-green) 0%, rgba(var(--accent-green-rgb), 0.1) 100%);
+  background: linear-gradient(180deg, rgba(var(--accent-green-rgb), 0.1) 0%, var(--accent-green) 15%, var(--accent-green) 85%, rgba(var(--accent-green-rgb), 0.1) 100%);
   border-radius: var(--radius-full);
 }
 
@@ -654,7 +654,9 @@ body {
   flex-direction: column;
   align-items: center;
   padding-top: 4px;
+  width: 44px;
   min-width: 44px;
+  flex-shrink: 0;
 }
 
 .timeline-time {
@@ -677,6 +679,7 @@ body {
   z-index: 10;
   border: 2px solid #000;
   box-shadow: 0 0 10px var(--primary);
+  flex-shrink: 0;
 }
 
 .timeline-dot.muted {
@@ -724,13 +727,13 @@ body {
 }
 
 .event-tag.morning {
-  background: var(--accent-green);
-  color: #fff;
+  background: var(--primary);
+  color: #000;
 }
 
 .event-tag.workshop {
-  background: rgba(255, 255, 255, 0.1);
-  color: rgba(255, 255, 255, 0.7);
+  background: var(--primary);
+  color: #000;
 }
 
 .event-tag.lunch {
@@ -739,8 +742,8 @@ body {
 }
 
 .event-tag.shoot {
-  background: rgba(255, 255, 255, 0.1);
-  color: rgba(255, 255, 255, 0.7);
+  background: var(--primary);
+  color: #000;
 }
 
 .event-card-header .material-symbols-outlined {
