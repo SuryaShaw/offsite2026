@@ -3,22 +3,7 @@
    Application Logic
    ============================================ */
 
-// ---- Firebase Configuration ----
-const firebaseConfig = {
-  apiKey: "AIzaSyAV2UyCyjjBdf4lCSFl6sE434Y4zzlT8co",
-  authDomain: "offsite-app-f53d6.firebaseapp.com",
-  databaseURL: "https://offsite-app-f53d6-default-rtdb.asia-southeast1.firebasedatabase.app",
-  projectId: "offsite-app-f53d6",
-  storageBucket: "offsite-app-f53d6.firebasestorage.app",
-  messagingSenderId: "392064911388",
-  appId: "1:392064911388:web:c794c6a353c21582c3b7d9",
-  measurementId: "G-QPMJY6CS92"
-};
 
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
-const database = firebase.database();
-const messagesRef = database.ref('messages');
 
 document.addEventListener('DOMContentLoaded', () => {
   // ---- Register Service Worker for PWA ----
@@ -30,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let currentScreen = 'splash';
   let currentDatePill = 0;
   let currentFilter = 'all';
-  let chatUserName = localStorage.getItem('vgf_chat_name') || '';
+
 
   // ---- DOM References ----
   const screens = {
@@ -39,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     timeline: document.getElementById('timeline-screen'),
     people: document.getElementById('people-screen'),
     help: document.getElementById('help-screen'),
-    chat: document.getElementById('chat-screen')
+
   };
 
   const navItems = document.querySelectorAll('.nav-item');
@@ -92,10 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Trigger entrance animations
     triggerAnimations(screenName);
 
-    // Scroll chat to bottom when navigating to chat
-    if (screenName === 'chat') {
-      scrollChatToBottom();
-    }
+
   }
 
   function triggerAnimations(screenName) {
@@ -219,132 +201,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // ============================================
-  // CHAT FEATURE — Firebase Realtime Database
-  // ============================================
 
-  const chatMessages = document.getElementById('chat-messages');
-  const chatInput = document.getElementById('chat-input');
-  const chatSendBtn = document.getElementById('chat-send-btn');
-  const chatNameOverlay = document.getElementById('chat-name-overlay');
-  const chatNameInput = document.getElementById('chat-name-input');
-  const chatNameSubmit = document.getElementById('chat-name-submit');
-
-  // ---- Chat Name Setup ----
-  function initChatName() {
-    if (chatUserName) {
-      chatNameOverlay.classList.add('hidden');
-    } else {
-      chatNameOverlay.classList.remove('hidden');
-    }
-  }
-
-  chatNameSubmit.addEventListener('click', () => {
-    const name = chatNameInput.value.trim();
-    if (name.length > 0) {
-      chatUserName = name;
-      localStorage.setItem('vgf_chat_name', name);
-      chatNameOverlay.classList.add('hidden');
-      chatInput.focus();
-    }
-  });
-
-  chatNameInput.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter') {
-      chatNameSubmit.click();
-    }
-  });
-
-  // ---- Send Message ----
-  function sendMessage() {
-    const text = chatInput.value.trim();
-    if (!text || !chatUserName) return;
-
-    const message = {
-      sender: chatUserName,
-      text: text,
-      timestamp: Date.now()
-    };
-
-    messagesRef.push(message);
-    chatInput.value = '';
-    chatInput.focus();
-  }
-
-  chatSendBtn.addEventListener('click', sendMessage);
-  chatInput.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter') {
-      sendMessage();
-    }
-  });
-
-  // ---- Format Time ----
-  function formatTime(ts) {
-    const d = new Date(ts);
-    return d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-  }
-
-  function formatDate(ts) {
-    const d = new Date(ts);
-    const today = new Date();
-    const yesterday = new Date(today);
-    yesterday.setDate(yesterday.getDate() - 1);
-
-    if (d.toDateString() === today.toDateString()) return 'Today';
-    if (d.toDateString() === yesterday.toDateString()) return 'Yesterday';
-    return d.toLocaleDateString([], { month: 'short', day: 'numeric', year: 'numeric' });
-  }
-
-  // ---- Scroll to Bottom ----
-  function scrollChatToBottom() {
-    setTimeout(() => {
-      chatMessages.scrollTop = chatMessages.scrollHeight;
-    }, 50);
-  }
-
-  // ---- Render Messages from Firebase ----
-  let lastMessageDate = '';
-
-  messagesRef.orderByChild('timestamp').limitToLast(200).on('child_added', (snapshot) => {
-    const msg = snapshot.val();
-    if (!msg || !msg.text || !msg.sender) return;
-
-    const isSent = msg.sender === chatUserName;
-    const msgDate = formatDate(msg.timestamp);
-
-    // Add date separator if needed
-    if (msgDate !== lastMessageDate) {
-      const dateSep = document.createElement('div');
-      dateSep.className = 'chat-date-sep';
-      dateSep.innerHTML = `<span>${msgDate}</span>`;
-      chatMessages.appendChild(dateSep);
-      lastMessageDate = msgDate;
-    }
-
-    const msgEl = document.createElement('div');
-    msgEl.className = `chat-msg ${isSent ? 'sent' : 'received'}`;
-
-    let senderHtml = `<span class="chat-msg-sender">${escapeHtml(msg.sender)}</span>`;
-
-    msgEl.innerHTML = `
-      ${senderHtml}
-      <div class="chat-msg-bubble">${escapeHtml(msg.text)}</div>
-      <span class="chat-msg-time">${formatTime(msg.timestamp)}</span>
-    `;
-
-    chatMessages.appendChild(msgEl);
-    scrollChatToBottom();
-  });
-
-  // ---- HTML Escape ----
-  function escapeHtml(str) {
-    const div = document.createElement('div');
-    div.textContent = str;
-    return div.innerHTML;
-  }
-
-  // ---- Initialize Chat ----
-  initChatName();
 
   // ---- Start the App ----
   runSplash();

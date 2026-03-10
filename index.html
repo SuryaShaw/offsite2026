@@ -17,9 +17,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
     rel="stylesheet" />
 
-  <!-- Firebase SDK -->
-  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-database-compat.js"></script>
+
 </head>
 
 <body>
@@ -714,18 +712,7 @@
             </div>
             <span class="material-symbols-outlined chevron">chevron_right</span>
           </button>
-          <button class="help-action">
-            <div class="help-action-left">
-              <div class="help-action-icon">
-                <span class="material-symbols-outlined">chat_bubble</span>
-              </div>
-              <div class="help-action-text">
-                <p class="title">Live Production Chat</p>
-                <p class="subtitle">Response time: &lt; 2 mins</p>
-              </div>
-            </div>
-            <span class="material-symbols-outlined chevron">chevron_right</span>
-          </button>
+
         </section>
 
         <!-- Venue & Logistics -->
@@ -805,49 +792,7 @@
       </div>
     </div>
 
-    <!-- ===== SCREEN 6: CHAT ===== -->
-    <div id="chat-screen" class="screen chat-screen">
-      <!-- Name Setup Overlay -->
-      <div id="chat-name-overlay" class="chat-name-overlay">
-        <div class="chat-name-card">
-          <span class="material-symbols-outlined chat-name-icon">person</span>
-          <h2>Welcome to Chat</h2>
-          <p>Enter your name to start chatting with the team.</p>
-          <input id="chat-name-input" class="chat-name-field" type="text" placeholder="Your name..." maxlength="30" />
-          <button id="chat-name-submit" class="chat-name-btn">Join Chat</button>
-        </div>
-      </div>
 
-      <!-- Chat Header -->
-      <div class="chat-header">
-        <div class="chat-header-top">
-          <div>
-            <p class="brand-label">VineGarden Films</p>
-            <h2>Team Chat</h2>
-          </div>
-          <div class="chat-online">
-            <span class="chat-online-dot"></span>
-            <span class="chat-online-text">Live</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Chat Messages -->
-      <div class="chat-messages" id="chat-messages">
-        <div class="chat-welcome-msg">
-          <span class="material-symbols-outlined">forum</span>
-          <p>Welcome to the VGF team chat! Messages are shared with all participants.</p>
-        </div>
-      </div>
-
-      <!-- Chat Input -->
-      <div class="chat-input-bar">
-        <input id="chat-input" class="chat-input-field" type="text" placeholder="Type a message..." maxlength="500" />
-        <button id="chat-send-btn" class="chat-send-btn">
-          <span class="material-symbols-outlined">send</span>
-        </button>
-      </div>
-    </div>
 
     <!-- ===== BOTTOM NAVIGATION ===== -->
     <nav id="bottom-nav" class="bottom-nav" style="display: none;">
@@ -863,10 +808,7 @@
         <span class="material-symbols-outlined">group</span>
         <span class="nav-label">People</span>
       </button>
-      <button class="nav-item" data-screen="chat">
-        <span class="material-symbols-outlined">chat</span>
-        <span class="nav-label">Chat</span>
-      </button>
+
       <button class="nav-item" data-screen="help">
         <span class="material-symbols-outlined">help_outline</span>
         <span class="nav-label">Help</span>
