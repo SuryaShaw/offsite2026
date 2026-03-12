@@ -24,11 +24,32 @@ document.addEventListener('DOMContentLoaded', () => {
     timeline: document.getElementById('timeline-screen'),
     people: document.getElementById('people-screen'),
     help: document.getElementById('help-screen'),
-
   };
 
   const navItems = document.querySelectorAll('.nav-item');
   const bottomNav = document.getElementById('bottom-nav');
+
+  // ---- Contact Modal Logic ----
+  const contactModal = document.getElementById('contact-modal');
+  const openContactBtn = document.getElementById('open-contact-modal');
+  const closeContactBtn = document.getElementById('close-contact-modal');
+
+  if (openContactBtn && contactModal && closeContactBtn) {
+    openContactBtn.addEventListener('click', () => {
+      contactModal.classList.add('active');
+    });
+
+    closeContactBtn.addEventListener('click', () => {
+      contactModal.classList.remove('active');
+    });
+
+    // Close on outside click
+    contactModal.addEventListener('click', (e) => {
+      if (e.target === contactModal) {
+        contactModal.classList.remove('active');
+      }
+    });
+  }
 
   // ---- Splash Screen Logic ----
   function runSplash() {
@@ -206,3 +227,47 @@ document.addEventListener('DOMContentLoaded', () => {
   // ---- Start the App ----
   runSplash();
 });
+
+  // ---- Guidelines Modal Logic ----
+  const guidelinesModal = document.getElementById('guidelines-modal');
+  const openGuidelinesBtn = document.getElementById('open-guidelines-modal');
+  const closeGuidelinesBtn = document.getElementById('close-guidelines-modal');
+
+  if (openGuidelinesBtn && guidelinesModal && closeGuidelinesBtn) {
+    openGuidelinesBtn.addEventListener('click', () => {
+      guidelinesModal.classList.add('active');
+    });
+
+    closeGuidelinesBtn.addEventListener('click', () => {
+      guidelinesModal.classList.remove('active');
+    });
+
+    // Close on outside click
+    guidelinesModal.addEventListener('click', (e) => {
+      if (e.target === guidelinesModal) {
+        guidelinesModal.classList.remove('active');
+      }
+    });
+  }
+
+  // ---- FAQs Modal Logic ----
+  const faqsModal = document.getElementById('faqs-modal');
+  const openFaqsBtn = document.getElementById('open-faqs-modal');
+  const closeFaqsBtn = document.getElementById('close-faqs-modal');
+
+  if (openFaqsBtn && faqsModal && closeFaqsBtn) {
+    openFaqsBtn.addEventListener('click', () => {
+      faqsModal.classList.add('active');
+    });
+
+    closeFaqsBtn.addEventListener('click', () => {
+      faqsModal.classList.remove('active');
+    });
+
+    // Close on outside click
+    faqsModal.addEventListener('click', (e) => {
+      if (e.target === faqsModal) {
+        faqsModal.classList.remove('active');
+      }
+    });
+  }
