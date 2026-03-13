@@ -228,46 +228,68 @@ document.addEventListener('DOMContentLoaded', () => {
   runSplash();
 });
 
-  // ---- Guidelines Modal Logic ----
-  const guidelinesModal = document.getElementById('guidelines-modal');
-  const openGuidelinesBtn = document.getElementById('open-guidelines-modal');
-  const closeGuidelinesBtn = document.getElementById('close-guidelines-modal');
+// ---- Guidelines Modal Logic ----
+const guidelinesModal = document.getElementById('guidelines-modal');
+const openGuidelinesBtn = document.getElementById('open-guidelines-modal');
+const closeGuidelinesBtn = document.getElementById('close-guidelines-modal');
 
-  if (openGuidelinesBtn && guidelinesModal && closeGuidelinesBtn) {
-    openGuidelinesBtn.addEventListener('click', () => {
-      guidelinesModal.classList.add('active');
-    });
+if (openGuidelinesBtn && guidelinesModal && closeGuidelinesBtn) {
+  openGuidelinesBtn.addEventListener('click', () => {
+    guidelinesModal.classList.add('active');
+  });
 
-    closeGuidelinesBtn.addEventListener('click', () => {
+  closeGuidelinesBtn.addEventListener('click', () => {
+    guidelinesModal.classList.remove('active');
+  });
+
+  // Close on outside click
+  guidelinesModal.addEventListener('click', (e) => {
+    if (e.target === guidelinesModal) {
       guidelinesModal.classList.remove('active');
-    });
+    }
+  });
+}
 
-    // Close on outside click
-    guidelinesModal.addEventListener('click', (e) => {
-      if (e.target === guidelinesModal) {
-        guidelinesModal.classList.remove('active');
-      }
-    });
-  }
+// ---- FAQs Modal Logic ----
+const faqsModal = document.getElementById('faqs-modal');
+const openFaqsBtn = document.getElementById('open-faqs-modal');
+const closeFaqsBtn = document.getElementById('close-faqs-modal');
 
-  // ---- FAQs Modal Logic ----
-  const faqsModal = document.getElementById('faqs-modal');
-  const openFaqsBtn = document.getElementById('open-faqs-modal');
-  const closeFaqsBtn = document.getElementById('close-faqs-modal');
+if (openFaqsBtn && faqsModal && closeFaqsBtn) {
+  openFaqsBtn.addEventListener('click', () => {
+    faqsModal.classList.add('active');
+  });
 
-  if (openFaqsBtn && faqsModal && closeFaqsBtn) {
-    openFaqsBtn.addEventListener('click', () => {
-      faqsModal.classList.add('active');
-    });
+  closeFaqsBtn.addEventListener('click', () => {
+    faqsModal.classList.remove('active');
+  });
 
-    closeFaqsBtn.addEventListener('click', () => {
+  // Close on outside click
+  faqsModal.addEventListener('click', (e) => {
+    if (e.target === faqsModal) {
       faqsModal.classList.remove('active');
-    });
+    }
+  });
+}
 
-    // Close on outside click
-    faqsModal.addEventListener('click', (e) => {
-      if (e.target === faqsModal) {
-        faqsModal.classList.remove('active');
-      }
-    });
-  }
+// ---- Emergency Modal Logic ----
+const emergencyModal = document.getElementById('emergency-modal');
+const openEmergencyBtn = document.getElementById('open-emergency-modal');
+const closeEmergencyBtn = document.getElementById('close-emergency-modal');
+
+if (openEmergencyBtn && emergencyModal && closeEmergencyBtn) {
+  openEmergencyBtn.addEventListener('click', () => {
+    emergencyModal.classList.add('active');
+  });
+
+  closeEmergencyBtn.addEventListener('click', () => {
+    emergencyModal.classList.remove('active');
+  });
+
+  // Close on outside click
+  emergencyModal.addEventListener('click', (e) => {
+    if (e.target === emergencyModal) {
+      emergencyModal.classList.remove('active');
+    }
+  });
+}

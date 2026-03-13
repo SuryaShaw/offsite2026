@@ -745,36 +745,16 @@
         </section>
 
 
-        <!-- Emergency Contacts -->
-        <section style="margin-top: 32px;">
-          <div class="help-section-title">
-            <div class="bar"></div>
-            <h2 style="font-size: 18px; font-weight: 700; color: #fff;">Emergency Contacts</h2>
-          </div>
-          <div
-            style="background: rgba(101, 192, 45, 0.05); border: 1px solid rgba(101, 192, 45, 0.3); border-radius: 8px; padding: 18px;">
-            <p style="color: #e2e8f0; font-size: 15px; margin-bottom: 8px; line-height: 1.5;"><strong>Medical
-                emergency:</strong> <span style="color: #cbd5e1; font-weight: 300;">Nikhil Gauniyal</span></p>
-            <p style="color: #e2e8f0; font-size: 15px; margin-bottom: 8px; line-height: 1.5;"><strong>Lost
-                belongings:</strong> <span style="color: #cbd5e1; font-weight: 300;">Shivangi Pandit</span></p>
-            <p style="color: #e2e8f0; font-size: 15px; margin-bottom: 16px; line-height: 1.5;"><strong>Any urgent
-                concern:</strong> <span style="color: #cbd5e1; font-weight: 300;">Shubham Charodiya</span></p>
-            <p style="color: #65c02d; font-size: 13px; font-style: italic;">* Please contact the above coordinators
-              immediately.</p>
-          </div>
-        </section>
-
         <!-- Venue & Logistics -->
         <section>
           <div class="help-section-title">
             <div class="bar"></div>
             <h2>Venue: Redwood Resorts, Punchkula</h2>
-            <div class="venue-card" style="padding-bottom: 0;">
+            <div class="venue-card" style="padding: 0; border: none; background: transparent; border-radius: 0;">
               <a href="https://www.google.com/maps/place/Redwood+resorts/@30.6891683,76.9137835,19.16z/data=!4m9!3m8!1s0x390f939965459c1b:0x559863a53dc84a3f!5m2!4m1!1i2!8m2!3d30.6891067!4d76.9142276!16s%2Fg%2F11c7018wmn?entry=ttu&g_ep=EgoyMDI2MDMwOS4wIKXMDSoASAFQAw%3D%3D"
-                target="_blank" class="venue-map"
-                style="display: block; border-bottom-left-radius: inherit; border-bottom-right-radius: inherit;">
+                target="_blank" class="venue-map" style="display: block; border-radius: 0; margin-top: 16px;">
                 <img src="redwood-map.png" alt="Venue Map"
-                  style="object-fit: cover; width: 100%; height: 100%; border-bottom-left-radius: inherit; border-bottom-right-radius: inherit;" />
+                  style="object-fit: cover; width: 100%; height: 200px; display: block; border-radius: 0;" />
                 <div class="venue-map-gradient"></div>
                 <button class="venue-map-btn" style="pointer-events: none;">
                   <span class="material-symbols-outlined">map</span>
@@ -810,7 +790,7 @@
             </div>
             <span class="material-symbols-outlined chevron">chevron_right</span>
           </div>
-          <div class="resource-card">
+          <div class="resource-card" id="open-emergency-modal" style="cursor: pointer;">
             <div class="resource-icon emergency">
               <span class="material-symbols-outlined">medical_services</span>
             </div>
@@ -818,7 +798,7 @@
               <p class="title">Emergency Info</p>
               <p class="subtitle">Medics &amp; Security contacts</p>
             </div>
-            <span class="material-symbols-outlined external-icon">open_in_new</span>
+            <span class="material-symbols-outlined chevron">chevron_right</span>
           </div>
         </section>
       </div>
@@ -827,363 +807,323 @@
 
 
 
-
-    <p class="brand-text">VineGarden Films: 2026</p>
-  </div>
-
-  <div class="help-body">
-    <!-- Direct Assistance -->
-    <section>
-      <div class="help-section-title">
-        <div class="bar"></div>
-        <h2>Direct Assistance</h2>
-      </div>
-
-      <a href="tel:9907683476" class="help-action" style="text-decoration: none; color: inherit;">
-        <div class="help-action-left">
-          <div class="help-action-icon">
-            <span class="material-symbols-outlined">directions_car</span>
-          </div>
-          <div class="help-action-text">
-            <p class="title">Transportation</p>
-            <p class="subtitle">Shubham Charodiya - 9907683476</p>
-          </div>
+    <!-- Contact Support Modal -->
+    <div id="contact-modal" class="modal-overlay">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Contact Support</h2>
+          <button id="close-contact-modal" class="modal-close">
+            <span class="material-symbols-outlined">close</span>
+          </button>
         </div>
-        <span class="material-symbols-outlined chevron">call</span>
-      </a>
-
-      <a href="tel:8448506395" class="help-action" style="text-decoration: none; color: inherit;">
-        <div class="help-action-left">
-          <div class="help-action-icon">
-            <span class="material-symbols-outlined">restaurant</span>
-          </div>
-          <div class="help-action-text">
-            <p class="title">Food & Drink</p>
-            <p class="subtitle">Nikhil Gauniyal - 8448506395</p>
-          </div>
-        </div>
-        <span class="material-symbols-outlined chevron">call</span>
-      </a>
-
-      <a href="tel:9903524081" class="help-action" style="text-decoration: none; color: inherit;">
-        <div class="help-action-left">
-          <div class="help-action-icon">
-            <span class="material-symbols-outlined">sports_esports</span>
-          </div>
-          <div class="help-action-text">
-            <p class="title">Games</p>
-            <p class="subtitle">Surya Prakash Shaw - 9903524081</p>
-          </div>
-        </div>
-        <span class="material-symbols-outlined chevron">call</span>
-      </a>
-
-      <a href="tel:7838016666" class="help-action" style="text-decoration: none; color: inherit;">
-        <div class="help-action-left">
-          <div class="help-action-icon">
-            <span class="material-symbols-outlined">bedroom_parent</span>
-          </div>
-          <div class="help-action-text">
-            <p class="title">Rooms & Other</p>
-            <p class="subtitle">Shivangi Pandit - 7838016666</p>
-          </div>
-        </div>
-        <span class="material-symbols-outlined chevron">call</span>
-      </a>
-
-    </section>
-  </div>
-  </div>
-
-
-  <!-- Contact Support Modal -->
-  <div id="contact-modal" class="modal-overlay">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h2>Contact Support</h2>
-        <button id="close-contact-modal" class="modal-close">
-          <span class="material-symbols-outlined">close</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <a href="tel:9907683476" class="help-action"
-          style="text-decoration: none; color: inherit; background: rgba(255,255,255,0.05); margin-bottom: 8px; display: flex;">
-          <div class="help-action-left">
-            <div class="help-action-icon">
-              <span class="material-symbols-outlined">directions_car</span>
+        <div class="modal-body">
+          <a href="tel:9907683476" class="help-action"
+            style="text-decoration: none; color: inherit; background: rgba(255,255,255,0.05); margin-bottom: 8px; display: flex;">
+            <div class="help-action-left">
+              <div class="help-action-icon">
+                <span class="material-symbols-outlined">directions_car</span>
+              </div>
+              <div class="help-action-text">
+                <p class="title">Transportation</p>
+                <p class="subtitle">Shubham Charodiya - 9907683476</p>
+              </div>
             </div>
-            <div class="help-action-text">
-              <p class="title">Transportation</p>
-              <p class="subtitle">Shubham Charodiya - 9907683476</p>
+            <span class="material-symbols-outlined chevron">call</span>
+          </a>
+
+          <a href="tel:8448506395" class="help-action"
+            style="text-decoration: none; color: inherit; background: rgba(255,255,255,0.05); margin-bottom: 8px; display: flex;">
+            <div class="help-action-left">
+              <div class="help-action-icon">
+                <span class="material-symbols-outlined">restaurant</span>
+              </div>
+              <div class="help-action-text">
+                <p class="title">Food & Drink</p>
+                <p class="subtitle">Nikhil Gauniyal - 8448506395</p>
+              </div>
             </div>
-          </div>
-          <span class="material-symbols-outlined chevron">call</span>
-        </a>
+            <span class="material-symbols-outlined chevron">call</span>
+          </a>
 
-        <a href="tel:8448506395" class="help-action"
-          style="text-decoration: none; color: inherit; background: rgba(255,255,255,0.05); margin-bottom: 8px; display: flex;">
-          <div class="help-action-left">
-            <div class="help-action-icon">
-              <span class="material-symbols-outlined">restaurant</span>
+          <a href="tel:9903524081" class="help-action"
+            style="text-decoration: none; color: inherit; background: rgba(255,255,255,0.05); margin-bottom: 8px; display: flex;">
+            <div class="help-action-left">
+              <div class="help-action-icon">
+                <span class="material-symbols-outlined">sports_esports</span>
+              </div>
+              <div class="help-action-text">
+                <p class="title">Games</p>
+                <p class="subtitle">Surya Prakash Shaw - 9903524081</p>
+              </div>
             </div>
-            <div class="help-action-text">
-              <p class="title">Food & Drink</p>
-              <p class="subtitle">Nikhil Gauniyal - 8448506395</p>
+            <span class="material-symbols-outlined chevron">call</span>
+          </a>
+
+          <a href="tel:7838016666" class="help-action"
+            style="text-decoration: none; color: inherit; background: rgba(255,255,255,0.05); margin-bottom: 8px; display: flex;">
+            <div class="help-action-left">
+              <div class="help-action-icon">
+                <span class="material-symbols-outlined">bedroom_parent</span>
+              </div>
+              <div class="help-action-text">
+                <p class="title">Rooms & Other</p>
+                <p class="subtitle">Shivangi Pandit - 7838016666</p>
+              </div>
             </div>
-          </div>
-          <span class="material-symbols-outlined chevron">call</span>
-        </a>
-
-        <a href="tel:9903524081" class="help-action"
-          style="text-decoration: none; color: inherit; background: rgba(255,255,255,0.05); margin-bottom: 8px; display: flex;">
-          <div class="help-action-left">
-            <div class="help-action-icon">
-              <span class="material-symbols-outlined">sports_esports</span>
-            </div>
-            <div class="help-action-text">
-              <p class="title">Games</p>
-              <p class="subtitle">Surya Prakash Shaw - 9903524081</p>
-            </div>
-          </div>
-          <span class="material-symbols-outlined chevron">call</span>
-        </a>
-
-        <a href="tel:7838016666" class="help-action"
-          style="text-decoration: none; color: inherit; background: rgba(255,255,255,0.05); margin-bottom: 8px; display: flex;">
-          <div class="help-action-left">
-            <div class="help-action-icon">
-              <span class="material-symbols-outlined">bedroom_parent</span>
-            </div>
-            <div class="help-action-text">
-              <p class="title">Rooms & Other</p>
-              <p class="subtitle">Shivangi Pandit - 7838016666</p>
-            </div>
-          </div>
-          <span class="material-symbols-outlined chevron">call</span>
-        </a>
-      </div>
-    </div>
-  </div>
-
-
-  <!-- Event Guidelines Modal -->
-  <div id="guidelines-modal" class="modal-overlay">
-    <div class="modal-content" style="max-height: 85vh; display: flex; flex-direction: column; padding-bottom: 24px;">
-      <div class="modal-header" style="flex-shrink: 0;">
-        <h2>Event Guidelines</h2>
-        <button id="close-guidelines-modal" class="modal-close">
-          <span class="material-symbols-outlined">close</span>
-        </button>
-      </div>
-      <div class="modal-body" style="overflow-y: auto; padding-right: 8px;">
-        <div style="margin-bottom: 24px;">
-          <h3 style="color: var(--primary); font-size: 14px; margin-bottom: 8px;">Participation</h3>
-          <p style="color: #cbd5e1; font-size: 13px; margin-bottom: 4px; line-height: 1.5;">&bull; All employees
-            attending the offsite are encouraged to participate in activities.</p>
-          <p style="color: #cbd5e1; font-size: 13px; line-height: 1.5;">&bull; Team captains will help coordinate
-            participation.</p>
-        </div>
-
-        <div style="margin-bottom: 24px;">
-          <h3 style="color: var(--primary); font-size: 14px; margin-bottom: 8px;">Attendance</h3>
-          <p style="color: #cbd5e1; font-size: 13px; line-height: 1.5;">&bull; If someone is unable to attend after
-            confirming, please inform the organizers beforehand.</p>
-        </div>
-
-        <div style="margin-bottom: 24px;">
-          <h3 style="color: var(--primary); font-size: 14px; margin-bottom: 8px;">Respect and inclusivity</h3>
-          <p style="color: #cbd5e1; font-size: 13px; margin-bottom: 4px; line-height: 1.5;">&bull; The offsite is meant
-            to be a safe and inclusive environment for everyone.</p>
-          <p style="color: #cbd5e1; font-size: 13px; line-height: 1.5;">&bull; Any behavior that is disrespectful,
-            discriminatory, or inappropriate will not be tolerated.</p>
-        </div>
-
-        <div style="margin-bottom: 24px;">
-          <h3 style="color: var(--primary); font-size: 14px; margin-bottom: 8px;">Personal belongings</h3>
-          <p style="color: #cbd5e1; font-size: 13px; margin-bottom: 4px; line-height: 1.5;">&bull; Participants are
-            responsible for their own personal belongings.</p>
-          <p style="color: #cbd5e1; font-size: 13px; line-height: 1.5;">&bull; The company or organizers will not be
-            liable for any lost items.</p>
-        </div>
-
-        <div style="margin-bottom: 24px;">
-          <h3 style="color: var(--primary); font-size: 14px; margin-bottom: 8px;">Cleanliness</h3>
-          <p style="color: #cbd5e1; font-size: 13px; margin-bottom: 4px; line-height: 1.5;">&bull; Please help maintain
-            cleanliness at the venue.</p>
-          <p style="color: #cbd5e1; font-size: 13px; line-height: 1.5;">&bull; Dispose of waste in designated bins.</p>
-        </div>
-
-        <div style="margin-bottom: 24px;">
-          <h3 style="color: var(--primary); font-size: 14px; margin-bottom: 8px;">Conduct</h3>
-          <p style="color: #cbd5e1; font-size: 13px; line-height: 1.5;">&bull; Follow instructions given by volunteers
-            and organizers.</p>
-        </div>
-
-        <div style="margin-bottom: 24px;">
-          <h3 style="color: var(--primary); font-size: 14px; margin-bottom: 8px;">Safety</h3>
-          <p style="color: #cbd5e1; font-size: 13px; margin-bottom: 4px; line-height: 1.5;">&bull; Follow safety
-            instructions during physical activities.</p>
-          <p style="color: #cbd5e1; font-size: 13px; line-height: 1.5;">&bull; Inform your group leader if you have any
-            medical condition or injury.</p>
-        </div>
-
-        <div style="margin-bottom: 24px;">
-          <h3 style="color: var(--primary); font-size: 14px; margin-bottom: 8px;">Timelines</h3>
-          <p style="color: #cbd5e1; font-size: 13px; margin-bottom: 4px; line-height: 1.5;">&bull; Activities will
-            follow the planned itinerary schedule.</p>
-          <p style="color: #cbd5e1; font-size: 13px; line-height: 1.5;">&bull; Participants are expected to arrive on
-            time.</p>
-        </div>
-
-        <div style="margin-bottom: 32px;">
-          <h3 style="color: var(--primary); font-size: 14px; margin-bottom: 8px;">Equipment</h3>
-          <p style="color: #cbd5e1; font-size: 13px; margin-bottom: 4px; line-height: 1.5;">&bull; Any event equipment
-            should be used responsibly.</p>
-          <p style="color: #cbd5e1; font-size: 13px; line-height: 1.5;">&bull; Avoid damaging or misplacing event
-            materials.</p>
-        </div>
-
-        <div
-          style="background: rgba(var(--accent-green-rgb), 0.15); border: 1px solid rgba(var(--primary-rgb), 0.3); border-radius: 8px; padding: 16px;">
-          <h3 style="color: #fff; font-size: 14px; margin-bottom: 12px; display: flex; align-items: center; gap: 6px;">
-            <span class="material-symbols-outlined" style="color: #ef4444; font-size: 18px;">emergency</span> Emergency
-            Contacts
-          </h3>
-          <p style="color: #cbd5e1; font-size: 12px; margin-bottom: 8px;"><strong>Medical emergency:</strong> Nikhil
-            Gauniyal</p>
-          <p style="color: #cbd5e1; font-size: 12px; margin-bottom: 8px;"><strong>Lost belongings:</strong> Shivangi
-            Pandit</p>
-          <p style="color: #cbd5e1; font-size: 12px; margin-bottom: 12px;"><strong>Any urgent concern:</strong> Shubham
-            Charodiya</p>
-          <p style="color: var(--primary); font-size: 11px; font-style: italic;">* Please contact the above coordinators
-            immediately.</p>
+            <span class="material-symbols-outlined chevron">call</span>
+          </a>
         </div>
       </div>
     </div>
-  </div>
 
 
-  <!-- FAQs Modal -->
-  <div id="faqs-modal" class="modal-overlay">
-    <div class="modal-content" style="max-height: 85vh; display: flex; flex-direction: column; padding-bottom: 24px;">
-      <div class="modal-header" style="flex-shrink: 0;">
-        <h2>FAQs</h2>
-        <button id="close-faqs-modal" class="modal-close">
-          <span class="material-symbols-outlined">close</span>
-        </button>
-      </div>
-      <div class="modal-body" style="overflow-y: auto; padding-right: 8px; padding-bottom: 24px;">
-        <div style="margin-bottom: 24px;">
-          <h3 style="color: var(--primary); font-size: 14px; margin-bottom: 8px; line-height: 1.4;">Q1. When is the
-            offsite and onsite happening?</h3>
-          <p style="color: #cbd5e1; font-size: 13px; line-height: 1.5;">The offsite will take place from 2nd April to
-            5th April. The onsite sessions will continue from 6th April to 9th April.</p>
+    <!-- Event Guidelines Modal -->
+    <div id="guidelines-modal" class="modal-overlay">
+      <div class="modal-content" style="max-height: 85vh; display: flex; flex-direction: column; padding-bottom: 24px;">
+        <div class="modal-header" style="flex-shrink: 0;">
+          <h2>Event Guidelines</h2>
+          <button id="close-guidelines-modal" class="modal-close">
+            <span class="material-symbols-outlined">close</span>
+          </button>
         </div>
+        <div class="modal-body" style="overflow-y: auto; padding-right: 8px;">
+          <div style="margin-bottom: 24px;">
+            <h3 style="color: #65c02d; font-size: 16px; margin-bottom: 8px;">Participation</h3>
+            <p style="color: #cbd5e1; font-size: 13px; margin-bottom: 4px; line-height: 1.5;">&bull; All employees
+              attending the offsite are encouraged to participate in activities.</p>
+            <p style="color: #cbd5e1; font-size: 13px; line-height: 1.5;">&bull; Team captains will help coordinate
+              participation.</p>
+          </div>
 
-        <div style="margin-bottom: 24px;">
-          <h3 style="color: var(--primary); font-size: 14px; margin-bottom: 8px; line-height: 1.4;">Q2. What should we
-            bring for the offsite?</h3>
-          <ul style="color: #cbd5e1; font-size: 13px; line-height: 1.5; margin-left: 20px;">
-            <li>Comfortable clothing</li>
-            <li>Sports shoes for activities</li>
-            <li>Swimming costume for the pool party</li>
-            <li>A pair of blue jeans for the group photograph</li>
-            <li>Official ID proof (such as PAN card or Aadhaar card)</li>
-            <li>Any personal essentials you may need during the trip</li>
-          </ul>
-        </div>
+          <div style="margin-bottom: 24px;">
+            <h3 style="color: #65c02d; font-size: 16px; margin-bottom: 8px;">Attendance</h3>
+            <p style="color: #cbd5e1; font-size: 13px; line-height: 1.5;">&bull; If someone is unable to attend after
+              confirming, please inform the organizers beforehand.</p>
+          </div>
 
-        <div style="margin-bottom: 24px;">
-          <h3 style="color: var(--primary); font-size: 14px; margin-bottom: 8px; line-height: 1.4;">Q2. What should we
-            bring for the onsite?</h3>
-          <p style="color: #cbd5e1; font-size: 13px; margin-bottom: 8px; line-height: 1.5;">Please ensure you carry the
-            following items for a smooth and productive onsite experience:</p>
-          <ul style="color: #cbd5e1; font-size: 13px; line-height: 1.5; margin-left: 20px; margin-bottom: 8px;">
-            <li>Laptop and charger</li>
-            <li>Official / smart casual clothes for work sessions</li>
-            <li>Comfortable clothes for travel or informal activities</li>
-            <li>Personal toiletries and essentials</li>
-            <li>Any required medications</li>
-            <li>Notebook and pen (optional, for quick notes)</li>
-            <li>Phone charger / power bank</li>
-            <li>Government ID proof (if required for travel or hotel check-in)</li>
-          </ul>
-          <p style="color: #cbd5e1; font-size: 13px; line-height: 1.5; font-style: italic;">Make sure all important
-            work-related devices and chargers are packed before departure.</p>
-        </div>
+          <div style="margin-bottom: 24px;">
+            <h3 style="color: #65c02d; font-size: 16px; margin-bottom: 8px;">Respect and inclusivity.</h3>
+            <p style="color: #cbd5e1; font-size: 13px; margin-bottom: 4px; line-height: 1.5;">&bull; The offsite is
+              meant to be a <strong>safe and inclusive environment for everyone.</strong></p>
+            <p style="color: #cbd5e1; font-size: 13px; line-height: 1.5;">&bull; Any behavior that is disrespectful,
+              discriminatory, or inappropriate will not be tolerated.</p>
+          </div>
 
-        <div style="margin-bottom: 24px;">
-          <h3 style="color: var(--primary); font-size: 14px; margin-bottom: 8px; line-height: 1.4;">Q3. Are activities
-            mandatory?</h3>
-          <p style="color: #cbd5e1; font-size: 13px; line-height: 1.5;">Participation is encouraged as the activities
-            are designed for team bonding. However, people with health concerns may opt out.</p>
-        </div>
+          <div style="margin-bottom: 24px;">
+            <h3 style="color: #65c02d; font-size: 16px; margin-bottom: 8px;">Personal belongings</h3>
+            <p style="color: #cbd5e1; font-size: 13px; margin-bottom: 4px; line-height: 1.5;">&bull; Participants are
+              responsible for their <strong>own personal belongings.</strong></p>
+            <p style="color: #cbd5e1; font-size: 13px; line-height: 1.5;">&bull; The company or organizers will not be
+              liable for any lost items.</p>
+          </div>
 
-        <div style="margin-bottom: 24px;">
-          <h3 style="color: var(--primary); font-size: 14px; margin-bottom: 8px; line-height: 1.4;">Q4. Will teams be
-            pre-decided?</h3>
-          <p style="color: #cbd5e1; font-size: 13px; line-height: 1.5;">It depends on the activity; teams will be formed
-            in advance and shared before the activities begin.</p>
-        </div>
+          <div style="margin-bottom: 24px;">
+            <h3 style="color: #65c02d; font-size: 16px; margin-bottom: 8px;">Cleanliness</h3>
+            <p style="color: #cbd5e1; font-size: 13px; margin-bottom: 4px; line-height: 1.5;">&bull; Please help
+              maintain <strong>cleanliness at the venue.</strong></p>
+            <p style="color: #cbd5e1; font-size: 13px; line-height: 1.5;">&bull; Dispose of waste in designated bins.
+            </p>
+          </div>
 
-        <div style="margin-bottom: 24px;">
-          <h3 style="color: var(--primary); font-size: 14px; margin-bottom: 8px; line-height: 1.4;">Q5. What kind of
-            activities are planned?</h3>
-          <p style="color: #cbd5e1; font-size: 13px; margin-bottom: 4px; line-height: 1.5;">Some activities include:</p>
-          <ul style="color: #cbd5e1; font-size: 13px; line-height: 1.5; margin-left: 20px;">
-            <li>Movie / entertainment session</li>
-            <li>Pictionary (Draw the opposite)</li>
-            <li>Obstacle course</li>
-            <li>The VGF show</li>
-            <li>Outdoor games like Cricket</li>
-            <li>Pool hand ball</li>
-          </ul>
-        </div>
+          <div style="margin-bottom: 24px;">
+            <h3 style="color: #65c02d; font-size: 16px; margin-bottom: 8px;">Conduct</h3>
+            <p style="color: #cbd5e1; font-size: 13px; line-height: 1.5;">&bull; Follow instructions given by volunteers
+              and organizers.</p>
+          </div>
 
-        <div style="margin-bottom: 24px;">
-          <h3 style="color: var(--primary); font-size: 14px; margin-bottom: 8px; line-height: 1.4;">Q6. Is food included
-            in the event?</h3>
-          <p style="color: #cbd5e1; font-size: 13px; line-height: 1.5;">Yes, all meals and refreshments will be
-            arranged, and the menu will be completely vegetarian.</p>
-        </div>
+          <div style="margin-bottom: 24px;">
+            <h3 style="color: #65c02d; font-size: 16px; margin-bottom: 8px;">Safety</h3>
+            <p style="color: #cbd5e1; font-size: 13px; margin-bottom: 4px; line-height: 1.5;">&bull; Follow safety
+              instructions during physical activities.</p>
+            <p style="color: #cbd5e1; font-size: 13px; line-height: 1.5;">&bull; Inform your group leader <strong>if you
+                have any medical condition or injury.</strong></p>
+          </div>
 
-        <div style="margin-bottom: 24px;">
-          <h3 style="color: var(--primary); font-size: 14px; margin-bottom: 8px; line-height: 1.4;">Q7. What if someone
-            gets late or cannot attend a specific activity?</h3>
-          <p style="color: #cbd5e1; font-size: 13px; line-height: 1.5;">Please inform the event coordinators in advance.
-          </p>
-        </div>
+          <div style="margin-bottom: 24px;">
+            <h3 style="color: #65c02d; font-size: 16px; margin-bottom: 8px;">Timelines</h3>
+            <p style="color: #cbd5e1; font-size: 13px; margin-bottom: 4px; line-height: 1.5;">&bull; Activities will
+              follow the planned <strong>itinerary schedule.</strong></p>
+            <p style="color: #cbd5e1; font-size: 13px; line-height: 1.5;">&bull; Participants are expected to arrive on
+              time.</p>
+          </div>
 
-        <div style="margin-bottom: 24px;">
-          <h3 style="color: var(--primary); font-size: 14px; margin-bottom: 8px; line-height: 1.4;">Q8. Is there a dress
-            code?</h3>
-          <p style="color: #cbd5e1; font-size: 13px; line-height: 1.5;">Comfortable casual clothing is recommended.
-            Sports shoes are suggested for outdoor games.</p>
+          <div style="margin-bottom: 24px;">
+            <h3 style="color: #65c02d; font-size: 16px; margin-bottom: 8px;">Equipment</h3>
+            <p style="color: #cbd5e1; font-size: 13px; margin-bottom: 4px; line-height: 1.5;">&bull; Any event equipment
+              should be used responsibly.</p>
+            <p style="color: #cbd5e1; font-size: 13px; line-height: 1.5;">&bull; Avoid damaging or misplacing event
+              materials.</p>
+          </div>
+
+          <div style="margin-bottom: 32px;">
+            <h3 style="color: #65c02d; font-size: 16px; margin-bottom: 8px;">Cash loss</h3>
+            <p style="color: #cbd5e1; font-size: 13px; line-height: 1.5;">&bull; If any employee cancels their travel
+              ticket after it has been booked, the <strong>cancellation charges will have to be borne by the
+                employee.</strong></p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- ===== BOTTOM NAVIGATION ===== -->
-  <nav id="bottom-nav" class="bottom-nav" style="display: none;">
-    <button class="nav-item active" data-screen="home">
-      <span class="material-symbols-outlined">home</span>
-      <span class="nav-label">Home</span>
-    </button>
-    <button class="nav-item" data-screen="timeline">
-      <span class="material-symbols-outlined">event_note</span>
-      <span class="nav-label">Schedule</span>
-    </button>
-    <button class="nav-item" data-screen="people">
-      <span class="material-symbols-outlined">group</span>
-      <span class="nav-label">People</span>
-    </button>
 
-    <button class="nav-item" data-screen="help">
-      <span class="material-symbols-outlined">help_outline</span>
-      <span class="nav-label">Help</span>
-    </button>
-  </nav>
+    <!-- FAQs Modal -->
+    <div id="faqs-modal" class="modal-overlay">
+      <div class="modal-content" style="max-height: 85vh; display: flex; flex-direction: column; padding-bottom: 24px;">
+        <div class="modal-header" style="flex-shrink: 0;">
+          <h2>FAQs</h2>
+          <button id="close-faqs-modal" class="modal-close">
+            <span class="material-symbols-outlined">close</span>
+          </button>
+        </div>
+        <div class="modal-body" style="overflow-y: auto; padding-right: 8px; padding-bottom: 24px;">
+          <div style="margin-bottom: 24px;">
+            <h3 style="color: var(--primary); font-size: 14px; margin-bottom: 8px; line-height: 1.4;">Q1. When is the
+              offsite and onsite happening?</h3>
+            <p style="color: #cbd5e1; font-size: 13px; line-height: 1.5;">The offsite will take place from 2nd April to
+              5th April. The onsite sessions will continue from 6th April to 9th April.</p>
+          </div>
+
+          <div style="margin-bottom: 24px;">
+            <h3 style="color: var(--primary); font-size: 14px; margin-bottom: 8px; line-height: 1.4;">Q2. What should we
+              bring for the offsite?</h3>
+            <ul style="color: #cbd5e1; font-size: 13px; line-height: 1.5; margin-left: 20px;">
+              <li>Comfortable clothing</li>
+              <li>Sports shoes for activities</li>
+              <li>Swimming costume for the pool party</li>
+              <li>A pair of blue jeans for the group photograph</li>
+              <li>Official ID proof (such as PAN card or Aadhaar card)</li>
+              <li>Any personal essentials you may need during the trip</li>
+            </ul>
+          </div>
+
+          <div style="margin-bottom: 24px;">
+            <h3 style="color: var(--primary); font-size: 14px; margin-bottom: 8px; line-height: 1.4;">Q2. What should we
+              bring for the onsite?</h3>
+            <p style="color: #cbd5e1; font-size: 13px; margin-bottom: 8px; line-height: 1.5;">Please ensure you carry
+              the
+              following items for a smooth and productive onsite experience:</p>
+            <ul style="color: #cbd5e1; font-size: 13px; line-height: 1.5; margin-left: 20px; margin-bottom: 8px;">
+              <li>Laptop and charger</li>
+              <li>Official / smart casual clothes for work sessions</li>
+              <li>Comfortable clothes for travel or informal activities</li>
+              <li>Personal toiletries and essentials</li>
+              <li>Any required medications</li>
+              <li>Notebook and pen (optional, for quick notes)</li>
+              <li>Phone charger / power bank</li>
+              <li>Government ID proof (if required for travel or hotel check-in)</li>
+            </ul>
+            <p style="color: #cbd5e1; font-size: 13px; line-height: 1.5; font-style: italic;">Make sure all important
+              work-related devices and chargers are packed before departure.</p>
+          </div>
+
+          <div style="margin-bottom: 24px;">
+            <h3 style="color: var(--primary); font-size: 14px; margin-bottom: 8px; line-height: 1.4;">Q3. Are activities
+              mandatory?</h3>
+            <p style="color: #cbd5e1; font-size: 13px; line-height: 1.5;">Participation is encouraged as the activities
+              are designed for team bonding. However, people with health concerns may opt out.</p>
+          </div>
+
+          <div style="margin-bottom: 24px;">
+            <h3 style="color: var(--primary); font-size: 14px; margin-bottom: 8px; line-height: 1.4;">Q4. Will teams be
+              pre-decided?</h3>
+            <p style="color: #cbd5e1; font-size: 13px; line-height: 1.5;">It depends on the activity; teams will be
+              formed
+              in advance and shared before the activities begin.</p>
+          </div>
+
+          <div style="margin-bottom: 24px;">
+            <h3 style="color: var(--primary); font-size: 14px; margin-bottom: 8px; line-height: 1.4;">Q5. What kind of
+              activities are planned?</h3>
+            <p style="color: #cbd5e1; font-size: 13px; margin-bottom: 4px; line-height: 1.5;">Some activities include:
+            </p>
+            <ul style="color: #cbd5e1; font-size: 13px; line-height: 1.5; margin-left: 20px;">
+              <li>Movie / entertainment session</li>
+              <li>Pictionary (Draw the opposite)</li>
+              <li>Obstacle course</li>
+              <li>The VGF show</li>
+              <li>Outdoor games like Cricket</li>
+              <li>Pool hand ball</li>
+            </ul>
+          </div>
+
+          <div style="margin-bottom: 24px;">
+            <h3 style="color: var(--primary); font-size: 14px; margin-bottom: 8px; line-height: 1.4;">Q6. Is food
+              included
+              in the event?</h3>
+            <p style="color: #cbd5e1; font-size: 13px; line-height: 1.5;">Yes, all meals and refreshments will be
+              arranged, and the menu will be completely vegetarian.</p>
+          </div>
+
+          <div style="margin-bottom: 24px;">
+            <h3 style="color: var(--primary); font-size: 14px; margin-bottom: 8px; line-height: 1.4;">Q7. What if
+              someone
+              gets late or cannot attend a specific activity?</h3>
+            <p style="color: #cbd5e1; font-size: 13px; line-height: 1.5;">Please inform the event coordinators in
+              advance.
+            </p>
+          </div>
+
+          <div style="margin-bottom: 24px;">
+            <h3 style="color: var(--primary); font-size: 14px; margin-bottom: 8px; line-height: 1.4;">Q8. Is there a
+              dress
+              code?</h3>
+            <p style="color: #cbd5e1; font-size: 13px; line-height: 1.5;">Comfortable casual clothing is recommended.
+              Sports shoes are suggested for outdoor games.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Emergency Modal -->
+    <div id="emergency-modal" class="modal-overlay">
+      <div class="modal-content" style="max-height: 85vh; display: flex; flex-direction: column; padding-bottom: 24px;">
+        <div class="modal-header" style="flex-shrink: 0;">
+          <button id="close-emergency-modal" class="modal-close">
+            <span class="material-symbols-outlined">close</span>
+          </button>
+        </div>
+        <div class="modal-body" style="overflow-y: auto; padding-right: 8px; padding-bottom: 24px;">
+          <div style="display: flex; align-items: center; margin-bottom: 16px;">
+            <div style="width: 4px; height: 24px; background-color: #65c02d; border-radius: 2px; margin-right: 12px;">
+            </div>
+            <h2 style="font-size: 20px; font-weight: 700; color: #fff; margin: 0;">Emergency Contacts</h2>
+          </div>
+          <div
+            style="border: 1px solid rgba(101, 192, 45, 0.4); border-radius: 12px; padding: 20px; background: rgba(0,0,0,0.2);">
+            <p style="color: #fff; font-size: 16px; margin-bottom: 12px; line-height: 1.5;"><strong>Medical
+                emergency:</strong> <span style="color: #cbd5e1; font-weight: 300;">Nikhil Gauniyal</span></p>
+            <p style="color: #fff; font-size: 16px; margin-bottom: 12px; line-height: 1.5;"><strong>Lost
+                belongings:</strong> <span style="color: #cbd5e1; font-weight: 300;">Shivangi Pandit</span></p>
+            <p style="color: #fff; font-size: 16px; margin-bottom: 20px; line-height: 1.5;"><strong>Any urgent
+                concern:</strong> <span style="color: #cbd5e1; font-weight: 300;">Shubham Charodiya</span></p>
+            <p style="color: #65c02d; font-size: 14px; font-style: italic; margin: 0;">* Please contact the above
+              coordinators immediately.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== BOTTOM NAVIGATION ===== -->
+    <nav id="bottom-nav" class="bottom-nav" style="display: none;">
+      <button class="nav-item active" data-screen="home">
+        <span class="material-symbols-outlined">home</span>
+        <span class="nav-label">Home</span>
+      </button>
+      <button class="nav-item" data-screen="timeline">
+        <span class="material-symbols-outlined">event_note</span>
+        <span class="nav-label">Schedule</span>
+      </button>
+      <button class="nav-item" data-screen="people">
+        <span class="material-symbols-outlined">group</span>
+        <span class="nav-label">People</span>
+      </button>
+
+      <button class="nav-item" data-screen="help">
+        <span class="material-symbols-outlined">help_outline</span>
+        <span class="nav-label">Help</span>
+      </button>
+    </nav>
 
   </div>
   <script src="app.js"></script>
