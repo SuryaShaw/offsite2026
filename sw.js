@@ -1,4 +1,4 @@
-const CACHE_NAME = 'vgf-events-v31';
+const CACHE_NAME = 'vgf-events-v32';
 const ASSETS = [
     './',
     './index.html',

@@ -128,10 +128,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // ---- Schedule Tabs (Offsite / Onsite) ----
-  const scheduleTabs = document.querySelectorAll('.schedule-tab');
+  // ---- Schedule Date Selection ----
   const offsiteDates = document.getElementById('offsite-dates');
-  const onsiteDates = document.getElementById('onsite-dates');
   const scheduleDays = document.querySelectorAll('.schedule-day');
 
   function showScheduleDay(dateId) {
@@ -139,27 +137,6 @@ document.addEventListener('DOMContentLoaded', () => {
       day.style.display = (day.dataset.scheduleDate === dateId) ? 'block' : 'none';
     });
   }
-
-  scheduleTabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      scheduleTabs.forEach(t => t.classList.remove('active'));
-      tab.classList.add('active');
-      const schedule = tab.dataset.schedule;
-      if (schedule === 'offsite') {
-        offsiteDates.style.display = 'flex';
-        onsiteDates.style.display = 'none';
-        const firstPill = offsiteDates.querySelector('.date-pill');
-        offsiteDates.querySelectorAll('.date-pill').forEach(p => p.classList.remove('active'));
-        if (firstPill) { firstPill.classList.add('active'); showScheduleDay(firstPill.dataset.date); }
-      } else {
-        offsiteDates.style.display = 'none';
-        onsiteDates.style.display = 'flex';
-        const firstPill = onsiteDates.querySelector('.date-pill');
-        onsiteDates.querySelectorAll('.date-pill').forEach(p => p.classList.remove('active'));
-        if (firstPill) { firstPill.classList.add('active'); showScheduleDay(firstPill.dataset.date); }
-      }
-    });
-  });
 
   // ---- Date Pills on Schedule ----
   document.querySelectorAll('.date-pills').forEach(container => {
