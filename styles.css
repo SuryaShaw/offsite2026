@@ -94,9 +94,10 @@ body {
 .splash-screen {
   align-items: center;
   justify-content: space-between;
-  padding: 60px 24px 48px;
+  padding: 40px 24px 0px;
   position: relative;
-  overflow: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
   background: #111925;
 }
 
@@ -108,6 +109,7 @@ body {
   justify-content: center;
   width: 100%;
   z-index: 10;
+  padding-bottom: 80px;
 }
 
 /* Logo */
@@ -116,8 +118,8 @@ body {
 }
 
 .splash-logo-img {
-  width: 280px;
-  height: 280px;
+  width: 200px;
+  height: 200px;
   object-fit: contain;
 }
 
@@ -164,11 +166,14 @@ body {
 /* Bottom section with enter button */
 .splash-bottom {
   z-index: 10;
-  padding-bottom: 16px;
+  padding-bottom: 32px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
+  justify-content: center;
+  background: linear-gradient(to top, rgba(17, 25, 37, 1) 0%, rgba(17, 25, 37, 0) 100%);
 }
 
 .splash-enter-btn {
