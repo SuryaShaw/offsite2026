@@ -42,6 +42,7 @@ body {
   font-family: var(--font-display);
   background-color: var(--bg-dark);
   color: #f1f5f9;
+  height: 100vh;
   height: 100dvh;
   overflow: hidden;
 }
@@ -51,6 +52,7 @@ body {
   position: relative;
   display: flex;
   flex-direction: column;
+  height: 100vh;
   height: 100dvh;
   width: 100%;
   max-width: 430px;
@@ -63,6 +65,7 @@ body {
 .screen {
   display: none;
   flex-direction: column;
+  min-height: 100vh;
   min-height: 100dvh;
   width: 100%;
   position: absolute;

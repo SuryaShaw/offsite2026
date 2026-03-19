@@ -1,4 +1,4 @@
-const CACHE_NAME = 'vgf-events-v33';
+const CACHE_NAME = 'vgf-events-v35';
 const ASSETS = [
     './',
     './index.html',
@@ -7,8 +7,10 @@ const ASSETS = [
     './manifest.json',
     './redwood-map.png',
     './offsite5_banner.png',
+    './team_banner.png',
     './icon-192.png',
-    './icon-512.png'
+    './icon-512.png',
+    './apple-touch-icon.png'
 ];
 
 // Install — cache all core assets
